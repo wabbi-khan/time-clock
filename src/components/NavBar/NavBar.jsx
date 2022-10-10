@@ -21,7 +21,7 @@ const NavBar = () => {
           <span className='navbar-toggler-icon'></span>
         </button>
         <div className='collapse navbar-collapse' id='navbarNav'>
-          <ul className='navbar-nav mx-auto text-center'>
+          <ul className='navbar-nav mx-auto me-4 text-center'>
             <li className='nav-item '>
               <Link
                 className='nav-link active-link'
@@ -40,12 +40,22 @@ const NavBar = () => {
               <Link className='nav-link' href='#'>
                 Pricing
               </Link>
+            </li>{" "}
+            <li className='nav-item ms-4'>
+              <Link className='nav-link' href='#'>
+                Pricing
+              </Link>
+            </li>{" "}
+            <li className='nav-item ms-4'>
+              <Link className='nav-link' href='#'>
+                Pricing
+              </Link>
             </li>
-            <li className='nav-item'>
+            {/* <li className='nav-item'>
               <Link className='nav-link disabled ms-4'>Disabled</Link>
-            </li>
+            </li> */}
           </ul>
-          <ul className='navbar-nav mx-auto text-center nav-icons'>
+          <ul className='navbar-nav me-4 text-center nav-icons'>
             <li className='nav-item '>
               <Link className='nav-link' to={"/"}>
                 <svg

@@ -7,7 +7,7 @@ import About from "./pages/About";
 import "./Style/style.css";
 const App = () => {
   return (
-    <div className='container-fluid'>
+    <div className='container-fluid '>
       <Router>
         <NavBar />
         <Routes>
