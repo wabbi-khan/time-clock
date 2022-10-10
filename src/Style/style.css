@@ -18,16 +18,19 @@ nav .active-link:hover {
   color: white;
 }
 nav .nav-icons {
-  position: relative;
+  text-align: center;
+  margin: auto;
 }
 nav .nav-icons li a {
   color: black;
 }
-nav .nav-icons .totalProducts {
+nav .nav-icons .items {
+  position: relative;
+  width: 20px;
+  margin: auto;
+}
+nav .nav-icons .items .totalProducts {
   position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: black;
   color: white;
   font-size: 12px;
