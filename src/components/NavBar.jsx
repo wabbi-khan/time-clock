@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Logo from "../../img/logo.png";
+import Logo from "./../img/logo.png";
 import { MdOutlineKeyboardBackspace } from "react-icons/md";
 import { RiRefreshFill } from "react-icons/ri";
 import { motion } from "framer-motion";
-import "../../Style/style.css";
+import "./../Style/style.css";
 const NavBar = () => {
   const [isMenu, setIsMenu] = useState(false);
   return (
