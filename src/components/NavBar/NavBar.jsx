@@ -5,7 +5,7 @@ import "../../Style/style.css";
 const NavBar = () => {
   return (
     <>
-      <div className='nav-circle'></div>
+      {/* <div className='nav-circle'></div> */}
       <nav className='container navbar navbar-expand-lg bg-transparent'>
         <div className='container-fluid'>
           <Link className='navbar-brand' to={"/"}>
@@ -52,6 +52,9 @@ const NavBar = () => {
                 <Link className='nav-link' href='#'>
                   Pricing
                 </Link>
+              </li>{" "}
+              <li className='nav-item'>
+                <div className='nav-circle'></div>
               </li>
               {/* <li className='nav-item'>
               <Link className='nav-link disabled ms-4'>Disabled</Link>
