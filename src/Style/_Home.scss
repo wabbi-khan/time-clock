@@ -2,12 +2,16 @@
     .hero-left {
         margin-top: 60px !important;
         .hero-btn {
+            cursor: pointer;
             width: 40%;
             background-color: $circleColor;
             color: white;
             padding: 10px 20px;
             border-radius: 50px;
             text-align: center;
+            &:hover {
+                background-color: $fontColorDark;
+            }
         }
         .hero-left-content {
             line-height: 6ch;

@@ -64,12 +64,16 @@ nav .nav-icons .items .totalProducts {
   text-transform: uppercase;
 }
 .hero .hero-left .hero-btn {
+  cursor: pointer;
   width: 40%;
   background-color: #f15a29;
   color: white;
   padding: 10px 20px;
   border-radius: 50px;
   text-align: center;
+}
+.hero .hero-left .hero-btn:hover {
+  background-color: #141414;
 }
 .hero .hero-left .hero-left-content {
   line-height: 6ch;
