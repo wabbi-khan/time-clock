@@ -1,12 +1,3 @@
-.bg {
-    background-color: url("../img/bg-img.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 100%;
-    height: 100vh;
-}
-
 nav .active-link {
     background-color: black;
     color: white;
