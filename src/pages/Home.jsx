@@ -1,5 +1,5 @@
 import React from "react";
-import HeroImg from "../img/hero-img.png";
+import HeroImg from "../img/asd.png";
 const Home = () => {
   return (
     <div className='container-fluid mt-4 hero'>
@@ -18,9 +18,10 @@ const Home = () => {
             <div className='hero-btn ms-4'>Shop Now</div>
           </div>
         </div>
-        <div className='col-md-4 text-end mt-4 hero-right'>
-          <img src={HeroImg} alt='HeroImg' className='mt-4 ' />
-          <div className='hero-circle'></div>
+        <div className='col-md-6 text-end mt-4 hero-right'>
+          {/* <img src={HeroImg} alt='HeroImg' className='mt-4 ' /> */}
+          {/* <div className='hero-circle'></div> */}
+          <img src={HeroImg} alt='hero img' />
         </div>
       </div>
     </div>

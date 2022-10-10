@@ -87,19 +87,8 @@ nav .nav-icons .items .totalProducts {
   font-size: 13px;
   margin-left: 40px;
 }
-.hero .hero-circle {
-  background-color: #f15a29;
-  width: 450px;
-  height: 450px;
-  border-radius: 50%;
-  position: absolute;
-  margin: -24rem 0rem 0rem 18rem;
-}
-.hero img {
-  margin-left: 200px !important;
+.hero .hero-right img {
   width: 400px;
-  z-index: 9999;
-  position: relative;
 }
 
 @media screen and (max-width: 600px) {
@@ -117,8 +106,5 @@ nav .nav-icons .items .totalProducts {
   }
   .hero .hero-left p {
     font-size: 13px;
-  }
-  .hero-right {
-    display: none;
   }
 }/*# sourceMappingURL=style.css.map */
