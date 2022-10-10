@@ -60,7 +60,16 @@ nav .nav-icons .items .totalProducts {
   }
 }
 .hero .hero-left {
+  margin-top: 60px !important;
   text-transform: uppercase;
+}
+.hero .hero-left .hero-btn {
+  width: 40%;
+  background-color: #f15a29;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-align: center;
 }
 .hero .hero-left .hero-left-content {
   line-height: 6ch;
@@ -75,9 +84,8 @@ nav .nav-icons .items .totalProducts {
   font-weight: bold;
 }
 .hero .hero-left p {
-  text-align: center;
   font-size: 13px;
-  margin-left: 20px;
+  margin-left: 40px;
 }
 .hero .hero-circle {
   background-color: #f15a29;
@@ -95,6 +103,21 @@ nav .nav-icons .items .totalProducts {
 }
 
 @media screen and (max-width: 600px) {
+  .hero .hero-left {
+    text-transform: uppercase;
+  }
+  .hero .hero-left .hero-left-content {
+    line-height: 6ch;
+  }
+  .hero .hero-left h1 {
+    font-size: 1rem;
+  }
+  .hero .hero-left span {
+    font-size: 4rem !important;
+  }
+  .hero .hero-left p {
+    font-size: 13px;
+  }
   .hero-right {
     display: none;
   }

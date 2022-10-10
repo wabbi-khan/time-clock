@@ -1,5 +1,14 @@
 .hero {
     .hero-left {
+        margin-top: 60px !important;
+        .hero-btn {
+            width: 40%;
+            background-color: $circleColor;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-align: center;
+        }
         .hero-left-content {
             line-height: 6ch;
         }
@@ -14,9 +23,9 @@
             font-weight: bold;
         }
         p {
-            text-align: center;
+            // text-align: center;
             font-size: 13px;
-            margin-left: 20px;
+            margin-left: 40px;
         }
     }
     .hero-circle {
@@ -36,6 +45,23 @@
 }
 
 @media screen and (max-width: 600px) {
+    .hero {
+        .hero-left {
+            .hero-left-content {
+                line-height: 6ch;
+            }
+            text-transform: uppercase;
+            h1 {
+                font-size: 1rem;
+            }
+            span {
+                font-size: 4rem !important;
+            }
+            p {
+                font-size: 13px;
+            }
+        }
+    }
     .hero-right {
         display: none;
     }
