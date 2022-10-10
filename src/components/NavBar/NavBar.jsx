@@ -5,6 +5,7 @@ import "../../Style/style.css";
 const NavBar = () => {
   return (
     <>
+      <div className='nav-circle'></div>
       <nav className='container navbar navbar-expand-lg bg-transparent'>
         <div className='container-fluid'>
           <Link className='navbar-brand' to={"/"}>

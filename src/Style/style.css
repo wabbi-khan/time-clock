@@ -1,40 +1,56 @@
+.bg {
+  background-image: url("../img/bg-img.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 100vh;
+}
+
+.nav-circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: orange;
+  position: absolute;
+  margin: -8rem 0px 0px 58rem;
+}
+
 nav .active-link {
-    background-color: black;
-    color: white;
-    padding: 5px 30px !important;
-    border-radius: 5px;
-    margin-top: 5px;
+  background-color: black;
+  color: white;
+  padding: 5px 30px !important;
+  border-radius: 5px;
+  margin-top: 5px;
 }
-
 nav .active-link:hover {
-    color: white;
+  color: white;
 }
-
 nav .nav-icons {
-    text-align: center;
-    margin: auto;
+  text-align: center;
+  margin: auto;
 }
-
 nav .nav-icons li a {
-    color: black;
+  color: black;
 }
-
 nav .nav-icons .items {
-    position: relative;
-    width: 20px;
-    margin: auto;
+  position: relative;
+  width: 20px;
+  margin: auto;
 }
-
 nav .nav-icons .items .totalProducts {
-    position: absolute;
-    background-color: black;
-    color: white;
-    font-size: 12px;
-    width: 20px;
-    height: 20px;
-    margin: -30px 20px !important;
-    border-radius: 50%;
+  position: absolute;
+  background-color: black;
+  color: white;
+  font-size: 12px;
+  width: 20px;
+  height: 20px;
+  margin: -30px 20px !important;
+  border-radius: 50%;
 }
 
-
-/*# sourceMappingURL=style.css.map */
+@media screen and (max-width: 600px) {
+  .nav-circle {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */
