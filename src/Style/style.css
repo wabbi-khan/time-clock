@@ -53,6 +53,38 @@ nav .nav-icons .items .totalProducts {
   margin: -30px 20px !important;
   border-radius: 50%;
 }
+nav .showCart {
+  width: 350px;
+  height: 100vh;
+  position: fixed;
+  background-color: #f15a29;
+  top: 0;
+  right: 0;
+}
+nav .showCart .showCartContainer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+nav .showCart .showCartContainer .Backicon,
+nav .showCart .showCartContainer .removeItems,
+nav .showCart .showCartContainer p {
+  color: white;
+}
+nav .showCart .showCartContainer .Backicon {
+  font-size: 30px !important;
+}
+nav .showCart .showCartContainer P {
+  font-weight: bold;
+  font-size: 25px;
+  letter-spacing: 2px;
+}
+nav .showCart .showCartContainer .removeItems {
+  padding: 5px 10px;
+  background-color: black;
+  border-radius: 10px;
+}
 
 @media screen and (max-width: 600px) {
   .nav-circle {

@@ -45,6 +45,38 @@ nav {
             }
         }
     }
+    .showCart {
+        width: 350px;
+        height: 100vh;
+        position: fixed;
+        background-color: $circleColor;
+        top: 0;
+        right: 0;
+        .showCartContainer {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            .Backicon,
+            .removeItems,
+            p {
+                color: white;
+            }
+            .Backicon {
+                font-size: 30px !important;
+            }
+            P {
+                font-weight: bold;
+                font-size: 25px;
+                letter-spacing: 2px;
+            }
+            .removeItems {
+                padding: 5px 10px;
+                background-color: black;
+                border-radius: 10px;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 600px) {

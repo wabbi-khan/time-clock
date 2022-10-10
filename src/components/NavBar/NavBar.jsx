@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../img/logo.png";
+import { MdOutlineKeyboardBackspace } from "react-icons/md";
+import { RiRefreshFill } from "react-icons/ri";
+import { motion } from "framer-motion";
 import "../../Style/style.css";
 const NavBar = () => {
+  const [isMenu, setIsMenu] = useState(false);
   return (
     <>
       {/* <div className='nav-circle'></div> */}
@@ -77,7 +81,7 @@ const NavBar = () => {
               </li>
               <li className='nav-item ms-4'>
                 <Link className='nav-link' to={"/"}>
-                  <div className='items'>
+                  <div className='items' onClick={() => setIsMenu(!isMenu)}>
                     <svg
                       xmlns='http://www.w3.org/2000/svg'
                       width='25'
@@ -91,6 +95,29 @@ const NavBar = () => {
                     </svg>
                     <div className='totalProducts'>01</div>
                   </div>
+                  {isMenu && (
+                    <motion.div
+                      className='showCart'
+                      initial={{ opacity: 0, x: 200 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      exit={{ opacity: 0, x: 200 }}
+                    >
+                      <div className='showCartContainer'>
+                        <motion.div
+                          whileTap={{ scale: 0.75 }}
+                          className='Backicon'
+                          onClick={() => setIsMenu(!isMenu)}
+                        >
+                          <MdOutlineKeyboardBackspace />
+                        </motion.div>
+                        <p className='mt-4'>Cart</p>
+                        <div className='removeItems'>
+                          Clear
+                          <RiRefreshFill />
+                        </div>
+                      </div>
+                    </motion.div>
+                  )}
                 </Link>
               </li>
             </ul>
