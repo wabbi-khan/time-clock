@@ -7,16 +7,16 @@ import About from "./pages/About";
 import "./App.css";
 const App = () => {
   return (
-    <div className='bg'>
-      <Router>
+    <Router>
+      <div className='bg'>
         <NavBar />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
         </Routes>
-        <Footer />
-      </Router>
-    </div>
+      </div>
+      <Footer />
+    </Router>
   );
 };
 
