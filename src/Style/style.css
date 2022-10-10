@@ -111,4 +111,34 @@ nav .nav-icons .items .totalProducts {
   .hero .hero-left p {
     font-size: 13px;
   }
+}
+.mainRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainDiv {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  overflow-x: auto;
+  width: 60%;
+}
+.mainDiv::-webkit-scrollbar {
+  display: none;
+}
+.mainDiv .contentDiv {
+  background-color: orange;
+  width: 300px;
+  height: 350px;
+  border-radius: 50px;
+}
+
+.contentDiv {
+  background-color: orange;
+  width: 300px;
+  height: 350px;
+  border-radius: 50px;
 }/*# sourceMappingURL=style.css.map */

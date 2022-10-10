@@ -1,7 +1,3 @@
-body {
-    overflow-x: hidden;
-}
-
 .bg {
     overflow-x: hidden;
     background-image: url("./img/bg.png");
@@ -9,5 +5,5 @@ body {
     background-repeat: no-repeat;
     background-size: 100rem;
     width: 100%;
-    height: 100vh;
+    height: 100%;
 }
