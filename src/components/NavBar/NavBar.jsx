@@ -24,7 +24,7 @@ const NavBar = () => {
           </button>
           <div className='collapse navbar-collapse' id='navbarNav'>
             <ul className='navbar-nav mx-auto me-4 text-center'>
-              <li className='nav-item '>
+              <li className='nav-item'>
                 <Link
                   className='nav-link active-link'
                   aria-current='page'

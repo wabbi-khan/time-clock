@@ -11,17 +11,22 @@
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  background-color: orange;
+  background-color: #f15a29;
   position: absolute;
   margin: -8rem 0px 0px 58rem;
 }
 
+nav .nav-item a {
+  color: #141414;
+  font-weight: 400;
+}
 nav .active-link {
   background-color: black;
   color: white;
   padding: 5px 30px !important;
   border-radius: 5px;
   margin-top: 5px;
+  color: white !important;
 }
 nav .active-link:hover {
   color: white;
