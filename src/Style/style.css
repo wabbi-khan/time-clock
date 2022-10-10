@@ -58,4 +58,44 @@ nav .nav-icons .items .totalProducts {
   .nav-circle {
     display: none;
   }
+}
+.hero .hero-left {
+  text-transform: uppercase;
+}
+.hero .hero-left .hero-left-content {
+  line-height: 6ch;
+}
+.hero .hero-left h1 {
+  font-size: 5rem;
+}
+.hero .hero-left span {
+  margin: 10px !important;
+  font-size: 8rem;
+  color: #f15a29;
+  font-weight: bold;
+}
+.hero .hero-left p {
+  text-align: center;
+  font-size: 13px;
+  margin-left: 20px;
+}
+.hero .hero-circle {
+  background-color: #f15a29;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  position: absolute;
+  margin: -24rem 0rem 0rem 18rem;
+}
+.hero img {
+  margin-left: 200px !important;
+  width: 400px;
+  z-index: 9999;
+  position: relative;
+}
+
+@media screen and (max-width: 600px) {
+  .hero-right {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */

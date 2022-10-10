@@ -1,0 +1,42 @@
+.hero {
+    .hero-left {
+        .hero-left-content {
+            line-height: 6ch;
+        }
+        text-transform: uppercase;
+        h1 {
+            font-size: 5rem;
+        }
+        span {
+            margin: 10px !important;
+            font-size: 8rem;
+            color: $circleColor;
+            font-weight: bold;
+        }
+        p {
+            text-align: center;
+            font-size: 13px;
+            margin-left: 20px;
+        }
+    }
+    .hero-circle {
+        background-color: $circleColor;
+        width: 450px;
+        height: 450px;
+        border-radius: 50%;
+        position: absolute;
+        margin: -24rem 0rem 0rem 18rem;
+    }
+    img {
+        margin-left: 200px !important;
+        width: 400px;
+        z-index: 9999;
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .hero-right {
+        display: none;
+    }
+}
