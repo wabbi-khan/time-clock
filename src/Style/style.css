@@ -117,8 +117,7 @@ nav .nav-icons .items .totalProducts {
   justify-content: center;
   align-items: center;
 }
-
-.mainDiv {
+.mainRow .product-right {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -126,17 +125,16 @@ nav .nav-icons .items .totalProducts {
   overflow-x: auto;
   width: 60%;
 }
-.mainDiv::-webkit-scrollbar {
+.mainRow .product-right::-webkit-scrollbar {
   display: none;
 }
-.mainDiv .contentDiv {
+.mainRow .product-right .contentDiv {
   background-color: orange;
   width: 300px;
   height: 350px;
   border-radius: 50px;
 }
-
-.contentDiv {
+.mainRow .product-left .contentDiv {
   background-color: orange;
   width: 300px;
   height: 350px;

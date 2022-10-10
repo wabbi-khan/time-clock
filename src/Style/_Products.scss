@@ -1,32 +1,31 @@
-.mainRow {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.mainDiv {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    text-align: center;
-    overflow-x: auto;
-    width: 60%;
-    &::-webkit-scrollbar {
-        display: none;
-    }
-    .contentDiv {
-        background-color: orange;
-        width: 300px;
-        height: 350px;
-        border-radius: 50px;
-        // margin: 10px;
-    }
-}
-
-.contentDiv {
+@mixin contentDiv {
     background-color: orange;
     width: 300px;
     height: 350px;
     border-radius: 50px;
-    // margin: 10px;
+}
+
+.mainRow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .product-right {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+        overflow-x: auto;
+        width: 60%;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        .contentDiv {
+            @include contentDiv();
+        }
+    }
+    .product-left {
+        .contentDiv {
+            @include contentDiv();
+        }
+    }
 }
