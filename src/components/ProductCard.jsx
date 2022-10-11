@@ -16,7 +16,7 @@ const ProductCard = () => {
             </div>
           </div>
           <div>
-            <img src={Watch1} alt='Watch1' />
+            <motion.img whileHover={{ scale: 1.2 }} src={Watch1} alt='Watch1' />
           </div>
         </div>
         <div className='pro-details mt-4'>
@@ -29,9 +29,9 @@ const ProductCard = () => {
             <div className='color2 ms-2'></div>
             <div className='color3 ms-2'></div>
           </div>
-          <button className='btn btn-shopping'>
+          <motion.button whileTap={{ scale: 0.5 }} className='btn btn-shopping'>
             <MdShoppingCart />
-          </button>
+          </motion.button>
         </div>
       </div>
     </>

@@ -13,7 +13,12 @@ const NavBar = () => {
       <nav className='container navbar navbar-expand-lg bg-transparent'>
         <div className='container-fluid'>
           <Link className='navbar-brand' to={"/"}>
-            <img src={Logo} alt='logo' width={150} />
+            <motion.img
+              whileHover={{ scale: 1.3 }}
+              src={Logo}
+              alt='logo'
+              width={150}
+            />
           </Link>
           <button
             className='navbar-toggler'
