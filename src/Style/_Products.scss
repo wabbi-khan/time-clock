@@ -19,11 +19,11 @@
     align-items: center;
     .product-right {
         display: flex;
-        justify-content: space-evenly;
+        // justify-content: space-evenly;
         align-items: center;
         text-align: center;
-        overflow-x: auto;
-        width: 60%;
+        overflow-x: scroll;
+        width: 90%;
         &::-webkit-scrollbar {
             display: none;
         }

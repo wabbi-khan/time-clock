@@ -1,45 +1,45 @@
 {
-    "users": [{
+    "products": [{
             "id": 1,
             "price": 100,
             "title": "Sport",
             "sub_cat": "ladies",
-            "Image": "./src/img/watch1.jpg"
+            "Image": "https://res.cloudinary.com/xcltech/image/upload/v1665471244/100/watch3_ry3g5z.jpg"
         },
         {
             "id": 2,
             "price": 200,
             "title": "Sveston",
             "sub_cat": "ladies",
-            "Image": "./src/img/watch1.jpg"
+            "Image": "https://res.cloudinary.com/xcltech/image/upload/v1665471245/100/watch2_y0arqt.jpg"
         },
         {
             "id": 3,
             "title": "Rado",
             "price": 300,
             "sub_cat": "ladies",
-            "Image": "./src/img/watch1.jpg"
+            "Image": "https://res.cloudinary.com/xcltech/image/upload/v1665471250/100/watch1_qzd6y9.jpg"
         },
         {
             "id": 4,
             "title": "G-Shock",
             "price": 400,
             "sub_cat": "ladies",
-            "Image": "./src/img/watch1.jpg"
+            "Image": "https://res.cloudinary.com/xcltech/image/upload/v1665471244/100/watch3_ry3g5z.jpg"
         },
         {
             "id": 5,
             "title": "Rolex",
             "price": 500,
             "sub_cat": "ladies",
-            "Image": "./src/img/watch1.jpg"
+            "Image": "https://res.cloudinary.com/xcltech/image/upload/v1665471245/100/watch2_y0arqt.jpg"
         },
         {
             "id": 1,
             "title": "Naviforce",
             "price": 300,
             "sub_cat": "ladies",
-            "Image": "./src/img/watch1.jpg"
+            "Image": "https://res.cloudinary.com/xcltech/image/upload/v1665471250/100/watch1_qzd6y9.jpg"
         }
     ]
 }

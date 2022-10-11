@@ -5,18 +5,21 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import "./App.css";
+import { CartProvider } from "react-use-cart";
 const App = () => {
   return (
-    <Router>
-      <div className='bg'>
-        <NavBar />
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/about' element={<About />} />
-        </Routes>
-      </div>
-      <Footer />
-    </Router>
+    <CartProvider>
+      <Router>
+        <div className='bg'>
+          <NavBar />
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/about' element={<About />} />
+          </Routes>
+        </div>
+        <Footer />
+      </Router>
+    </CartProvider>
   );
 };
 
