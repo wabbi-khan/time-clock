@@ -160,15 +160,88 @@ nav .showCart .showCartContainer .removeItems {
 .mainRow .product-right::-webkit-scrollbar {
   display: none;
 }
-.mainRow .product-right .contentDiv {
-  background-color: orange;
-  width: 300px;
-  height: 350px;
-  border-radius: 50px;
-}
 .mainRow .product-left .contentDiv {
   background-color: orange;
   width: 300px;
   height: 350px;
   border-radius: 50px;
+}
+
+.ProductCard {
+  background-color: white;
+  width: 300px;
+  height: 350px;
+  border-radius: 50px;
+}
+.ProductCard .product-img {
+  position: relative;
+}
+.ProductCard .product-img .wishlist {
+  position: absolute;
+  top: 15px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+}
+.ProductCard .product-img .wishlist .sells {
+  background-color: rgb(255, 59, 59);
+  color: white;
+  padding: 2px 10px;
+  border-radius: 5px;
+}
+.ProductCard .product-img .icon {
+  font-size: 20px;
+  stroke-width: 0.9px;
+}
+.ProductCard .product-img img {
+  width: 300px;
+  height: 200px;
+  border-radius: 30px 0px;
+}
+.ProductCard .pro-details {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.ProductCard .pro-details .title {
+  font-size: 20px;
+  font-weight: bold;
+}
+.ProductCard .pro-details2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.ProductCard .pro-details2 .mainColor {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.ProductCard .pro-details2 .mainColor .color1 {
+  background-color: white;
+  border: 2px solid orange;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+.ProductCard .pro-details2 .mainColor .color2 {
+  background-color: white;
+  border: 2px solid blue;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+.ProductCard .pro-details2 .mainColor .color3 {
+  background-color: white;
+  border: 2px solid red;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+.ProductCard .pro-details2 .btn-shopping {
+  background-color: #f15a29;
+  color: white;
+  font-size: 20px;
+  border-radius: 50%;
 }/*# sourceMappingURL=style.css.map */

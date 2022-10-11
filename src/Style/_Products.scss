@@ -5,6 +5,14 @@
     border-radius: 50px;
 }
 
+@mixin color($color) {
+    background-color: white;
+    border: 2px solid $color;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+}
+
 .mainRow {
     display: flex;
     justify-content: center;
@@ -19,13 +27,78 @@
         &::-webkit-scrollbar {
             display: none;
         }
-        .contentDiv {
-            @include contentDiv();
-        }
     }
     .product-left {
         .contentDiv {
             @include contentDiv();
+        }
+    }
+}
+
+.ProductCard {
+    background-color: white;
+    width: 300px;
+    height: 350px;
+    border-radius: 50px;
+    .product-img {
+        position: relative;
+        .wishlist {
+            position: absolute;
+            top: 15px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            color: white;
+            .sells {
+                background-color: rgb(255, 59, 59);
+                color: white;
+                padding: 2px 10px;
+                border-radius: 5px;
+            }
+        }
+        .icon {
+            font-size: 20px;
+            stroke-width: 0.9px;
+        }
+        img {
+            width: 300px;
+            height: 200px;
+            border-radius: 30px 0px;
+        }
+    }
+    .pro-details {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .title {
+            font-size: 20px;
+            font-weight: bold;
+            // width: 10px;
+        }
+    }
+    .pro-details2 {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .mainColor {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            .color1 {
+                @include color(orange);
+            }
+            .color2 {
+                @include color(blue);
+            }
+            .color3 {
+                @include color(red);
+            }
+        }
+        .btn-shopping {
+            background-color: $circleColor;
+            color: white;
+            font-size: 20px;
+            border-radius: 50%;
         }
     }
 }
