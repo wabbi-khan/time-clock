@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../Style/style.css";
 import Watch1 from "../img/watch1.jpg";
 import { BsHeart } from "react-icons/bs";
 import { MdShoppingCart } from "react-icons/md";
 import { motion } from "framer-motion";
+import axios from "axios";
 const ProductCard = () => {
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    const fetchingProducts = async () => {
+      try {
+        const res = await axios.get("http://localhost:6000/products");
+        console.log(res);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    fetchingProducts();
+  }, []);
   return (
     <>
       <div className='ProductCard ms-4'>

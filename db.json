@@ -1,0 +1,45 @@
+{
+    "users": [{
+            "id": 1,
+            "price": 100,
+            "title": "Sport",
+            "sub_cat": "ladies",
+            "Image": "./src/img/watch1.jpg"
+        },
+        {
+            "id": 2,
+            "price": 200,
+            "title": "Sveston",
+            "sub_cat": "ladies",
+            "Image": "./src/img/watch1.jpg"
+        },
+        {
+            "id": 3,
+            "title": "Rado",
+            "price": 300,
+            "sub_cat": "ladies",
+            "Image": "./src/img/watch1.jpg"
+        },
+        {
+            "id": 4,
+            "title": "G-Shock",
+            "price": 400,
+            "sub_cat": "ladies",
+            "Image": "./src/img/watch1.jpg"
+        },
+        {
+            "id": 5,
+            "title": "Rolex",
+            "price": 500,
+            "sub_cat": "ladies",
+            "Image": "./src/img/watch1.jpg"
+        },
+        {
+            "id": 1,
+            "title": "Naviforce",
+            "price": 300,
+            "sub_cat": "ladies",
+            "Image": "./src/img/watch1.jpg"
+        }
+    ]
+}
