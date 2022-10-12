@@ -1,0 +1,42 @@
+// .div {
+//     margin-top: 20px;
+// }
+.div {
+    position: absolute;
+    overflow-y: scroll;
+    height: 400px;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.cartitems {
+    margin-top: 30px;
+    display: flex;
+    width: 320px;
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2e3033;
+    color: white;
+    .cartitemImg {
+        display: flex;
+    }
+    .cartitemQty {
+        display: flex;
+    }
+}
+
+.cartContainer button {
+    top: 90%;
+    position: absolute;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $circleColor;
+    padding: 10px 0px;
+    border: none;
+    color: white;
+    border-radius: 50px;
+}

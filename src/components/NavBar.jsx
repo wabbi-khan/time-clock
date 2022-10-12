@@ -6,6 +6,7 @@ import { RiRefreshFill } from "react-icons/ri";
 import { motion } from "framer-motion";
 import "./../Style/style.css";
 import { useCart } from "react-use-cart";
+import CartItems from "./CartItems";
 const NavBar = () => {
   const { totalItems, emptyCart } = useCart();
   const [isMenu, setIsMenu] = useState(false);
@@ -67,9 +68,6 @@ const NavBar = () => {
               <li className='nav-item'>
                 <div className='nav-circle'></div>
               </li>
-              {/* <li className='nav-item'>
-              <Link className='nav-link disabled ms-4'>Disabled</Link>
-            </li> */}
             </ul>
             <ul className='navbar-nav me-4 text-center nav-icons'>
               <li className='nav-item '>
@@ -104,7 +102,7 @@ const NavBar = () => {
                   </div>
                   {isMenu && (
                     <motion.div
-                      className='showCart'
+                      className='showCart bg-light'
                       initial={{ opacity: 0, x: 200 }}
                       animate={{ opacity: 1, x: 0 }}
                       exit={{ opacity: 0, x: 200 }}
@@ -127,15 +125,15 @@ const NavBar = () => {
                           <RiRefreshFill />
                         </motion.div>
                       </div>
+                      <div className='containerrr'>
+                        <CartItems />
+                      </div>
                     </motion.div>
                   )}
                 </Link>
               </li>
             </ul>
           </div>
-          {/* <div className='collapse navbar-collapse' id='navbarNav'> */}
-
-          {/* </div> */}
         </div>
       </nav>
     </>

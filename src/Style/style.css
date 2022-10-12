@@ -58,9 +58,13 @@ nav .showCart {
   height: 100vh;
   position: fixed;
   z-index: 9999;
-  background-color: #f15a29;
   top: 0;
   right: 0;
+}
+nav .showCart .containerrr {
+  background-color: #282a2c;
+  height: 100vh;
+  border-radius: 20px 20px;
 }
 nav .showCart .showCartContainer {
   margin-top: 20px;
@@ -69,16 +73,18 @@ nav .showCart .showCartContainer {
   align-items: center;
 }
 nav .showCart .showCartContainer .Backicon,
-nav .showCart .showCartContainer .removeItems,
 nav .showCart .showCartContainer p {
+  color: black;
+}
+nav .showCart .showCartContainer .removeItems {
   color: white;
 }
 nav .showCart .showCartContainer .Backicon {
-  font-size: 30px !important;
+  font-size: 25px !important;
 }
 nav .showCart .showCartContainer P {
   font-weight: bold;
-  font-size: 25px;
+  font-size: 20px;
   letter-spacing: 2px;
 }
 nav .showCart .showCartContainer .removeItems {
@@ -244,4 +250,44 @@ nav .showCart .showCartContainer .removeItems {
   color: white;
   font-size: 20px;
   border-radius: 50%;
+}
+
+.div {
+  position: absolute;
+  overflow-y: scroll;
+  height: 400px;
+}
+.div::-webkit-scrollbar {
+  display: none;
+}
+
+.cartitems {
+  margin-top: 30px;
+  display: flex;
+  width: 320px;
+  height: 100px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2e3033;
+  color: white;
+}
+.cartitems .cartitemImg {
+  display: flex;
+}
+.cartitems .cartitemQty {
+  display: flex;
+}
+
+.cartContainer button {
+  top: 90%;
+  position: absolute;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f15a29;
+  padding: 10px 0px;
+  border: none;
+  color: white;
+  border-radius: 50px;
 }/*# sourceMappingURL=style.css.map */
