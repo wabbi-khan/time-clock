@@ -274,8 +274,20 @@ nav .showCart .showCartContainer .removeItems {
 .cartitems .cartitemImg {
   display: flex;
 }
+.cartitems .cartitemImg img {
+  border-radius: 50%;
+}
+.cartitems .cartitemImg .carritemConten {
+  font-size: 15px;
+  margin-left: 5px;
+}
 .cartitems .cartitemQty {
   display: flex;
+}
+.cartitems .cartitemQty P {
+  background-color: orange;
+  padding: 1px 5px;
+  border-radius: 2px;
 }
 
 .cartContainer button {
@@ -286,8 +298,9 @@ nav .showCart .showCartContainer .removeItems {
   justify-content: center;
   align-items: center;
   background-color: #f15a29;
-  padding: 10px 0px;
+  padding: 8px 0px;
   border: none;
   color: white;
   border-radius: 50px;
+  font-size: 20px;
 }/*# sourceMappingURL=style.css.map */
