@@ -3,10 +3,12 @@ import "../Style/style.css";
 import { BiMinus, BiPlus } from "react-icons/bi";
 import { useCart } from "react-use-cart";
 const CartItems = () => {
-  const { isEmpty, items, updateItemQuantity, removeItem, emptyCart } =
-    useCart();
+  const { isEmpty, items, updateItemQuantity } = useCart();
   console.log(items);
-  if (isEmpty) return <h3 className='text-center'>Your Cart Is Empty</h3>;
+  if (isEmpty)
+    return (
+      <h3 className='text-center text-light mt-4 pt-4'>Your Cart Is Empty</h3>
+    );
 
   return (
     <>
@@ -24,16 +26,24 @@ const CartItems = () => {
                 />
                 <div className='carritemConten'>
                   <div>{item.title}</div>
-                  <div>{item.price}</div>
+                  <div>Rs. {item.price}</div>
                 </div>
               </div>
 
               <div className='cartitemQty'>
-                <div>
+                <div
+                  onClick={(e) =>
+                    updateItemQuantity(item.id, item.quantity - 1)
+                  }
+                >
                   <BiMinus />
                 </div>
                 <p>{item.quantity}</p>
-                <div>
+                <div
+                  onClick={(e) =>
+                    updateItemQuantity(item.id, item.quantity + 1)
+                  }
+                >
                   <BiPlus />
                 </div>
               </div>
