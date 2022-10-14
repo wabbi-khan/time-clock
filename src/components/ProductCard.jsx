@@ -13,7 +13,7 @@ const ProductCard = ({ img, title, price, item }) => {
       <div className='ProductCard ms-4'>
         <div className='product-img'>
           <div className='wishlist container'>
-            <div className='sells'>sells</div>
+            <div className='sells'>Sales</div>
             <div>
               <BsHeart className='icon' />
             </div>
@@ -29,13 +29,23 @@ const ProductCard = ({ img, title, price, item }) => {
         </div>
         <div className='pro-details mt-4'>
           <div className='title '>{title}</div>
-          <div className='price'> {price} </div>
+          <div className='price'>Rs. {price} </div>
         </div>
         <div className='pro-details2 mt-4'>
           <div className='mainColor'>
-            <div className='color1 ms-2'></div>
-            <div className='color2 ms-2'></div>
-            <div className='color3 ms-2'></div>
+            <div>Colors:</div>
+            <motion.div
+              whileHover={{ scale: 1.2 }}
+              className='color1 ms-2'
+            ></motion.div>
+            <motion.div
+              whileHover={{ scale: 1.2 }}
+              className='color2 ms-2'
+            ></motion.div>
+            <motion.div
+              whileHover={{ scale: 1.2 }}
+              className='color3 ms-2'
+            ></motion.div>
           </div>
           <motion.button
             whileTap={{ scale: 0.5 }}

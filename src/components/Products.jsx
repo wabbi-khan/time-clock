@@ -19,6 +19,14 @@ const Products = () => {
   }, []);
   return (
     <div className='container mt-4'>
+      <div className='proHeading col-md-12'>
+        <h3 className='text-center my-4'>TOP PRODUCTS</h3>
+        <div className='text-center mb-4'>
+          Explore the TimeOClock collection of prestigious, high-precision
+          timepieces. TimeOClock offers a wide assortment of Classic and
+          Professional watch models to suit any wrist.
+        </div>
+      </div>
       <div className='row text-center mainRow'>
         <div className='col-md-12 product-right mb-4'>
           <div className=' d-flex'>

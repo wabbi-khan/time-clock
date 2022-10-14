@@ -10,13 +10,11 @@ const App = () => {
   return (
     <CartProvider>
       <Router>
-        <div className='bg'>
-          <NavBar />
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/about' element={<About />} />
-          </Routes>
-        </div>
+        <NavBar />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/about' element={<About />} />
+        </Routes>
         <Footer />
       </Router>
     </CartProvider>
