@@ -1,14 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Logo from "../img/logo.png";
+import { motion } from "framer-motion";
 const Footer = () => {
   return (
     <>
       <footer class='text-center text-lg-start bg-light text-muted'>
-        <section class='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
-          <div class='me-5 d-none d-lg-block'>
-            {/* <span>Get connected with us on social networks:</span> */}
-          </div>
-
+        <div className='container text-center mt-4'>
+          <motion.img whileHover={{ scale: 1.3 }} src={Logo} alt='logo' />
+        </div>
+        <section class='d-flex justify-content-center border-bottom'>
           <div>
             <Link to='' class='me-4 text-reset'>
               <i class='fab fa-facebook-f'></i>
