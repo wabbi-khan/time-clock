@@ -51,7 +51,7 @@ const CartItems = () => {
             </div>
           ))}
         </div>
-        <button className='container ml-auto'>Checkout</button>
+        <button className='container ml-auto mt-2'>Checkout</button>
       </div>
     </>
   );

@@ -88,6 +88,9 @@ nav .showCart .showCartContainer .removeItems {
   .nav-circle {
     display: none;
   }
+  .nav-icons li:nth-child(1) {
+    display: none;
+  }
 }
 .hero .hero-left {
   margin-top: 60px !important;
@@ -140,6 +143,9 @@ nav .showCart .showCartContainer .removeItems {
   }
   .hero .hero-left p {
     font-size: 13px;
+  }
+  .hero .hero-right {
+    display: none;
   }
 }
 .proHeading {
@@ -262,6 +268,7 @@ nav .showCart .showCartContainer .removeItems {
   position: absolute;
   overflow-y: scroll;
   height: 400px;
+  padding-bottom: 10px;
 }
 .div::-webkit-scrollbar {
   display: none;
@@ -319,4 +326,10 @@ nav .showCart .showCartContainer .removeItems {
   background-size: 100rem;
   width: 100%;
   height: 70vh;
+}
+
+@media screen and (max-width: 600px) {
+  .debit-bg {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */
