@@ -5,8 +5,7 @@ import { MdShoppingCart } from "react-icons/md";
 import { motion } from "framer-motion";
 import { useCart } from "react-use-cart";
 const ProductCard = ({ img, title, price, item }) => {
-  const { addItem, items } = useCart();
-  console.log(items);
+  const { addItem } = useCart();
 
   return (
     <>
