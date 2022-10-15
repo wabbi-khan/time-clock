@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import "./App.css";
 import { CartProvider } from "react-use-cart";
+import MobileHeader from "./components/MobileHeader";
 const App = () => {
   return (
     <CartProvider>
@@ -18,6 +19,7 @@ const App = () => {
           </Routes>
         </div>
         <Footer />
+        <MobileHeader />
       </Router>
     </CartProvider>
   );
