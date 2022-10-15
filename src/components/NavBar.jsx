@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import "./../Style/style.css";
 import { useCart } from "react-use-cart";
 import CartItems from "./CartItems";
+import CartContainer from "./CartContainer";
 const NavBar = () => {
   const { totalItems, emptyCart } = useCart();
   const [isMenu, setIsMenu] = useState(false);
@@ -100,36 +101,7 @@ const NavBar = () => {
                     </svg>
                     <div className='totalProducts'>0{totalItems}</div>
                   </div>
-                  {isMenu && (
-                    <motion.div
-                      className='showCart bg-light'
-                      initial={{ opacity: 0, x: 200 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, x: 200 }}
-                    >
-                      <div className='showCartContainer'>
-                        <motion.div
-                          whileTap={{ scale: 0.75 }}
-                          className='Backicon'
-                          onClick={() => setIsMenu(!isMenu)}
-                        >
-                          <MdOutlineKeyboardBackspace />
-                        </motion.div>
-                        <p className='mt-4'>Cart</p>
-                        <motion.div
-                          whileTap={{ scale: 0.7 }}
-                          className='removeItems'
-                          onClick={(e) => emptyCart(e)}
-                        >
-                          Clear
-                          <RiRefreshFill />
-                        </motion.div>
-                      </div>
-                      <div className='containerrr'>
-                        <CartItems />
-                      </div>
-                    </motion.div>
-                  )}
+                  {isMenu && <CartContainer close={() => setIsMenu(!isMenu)} />}
                 </Link>
               </li>
             </ul>
