@@ -15,11 +15,11 @@ const DebitCardSection = () => {
           Get Upto <span>50%</span> Off On Debit Card
         </div>
         <div className='debit-time mt-2'>
-          <div className='time-content'>
+          <div className='time-content '>
             <div>{hrs}</div>
             <div>Hourse</div>
           </div>
-          <div className='time-content'>
+          <div className='time-content mx-4'>
             <div> {min} </div>
             <div>Minutes</div>
           </div>
