@@ -114,9 +114,9 @@ const Footer = () => {
         </section>
 
         <div class='text-center p-4'>
-          © 2021 Copyright:
-          <Link class='text-reset fw-bold' to='https://mdbootstrap.com/'>
-            MDBootstrap.com
+          © 2022 Copyright:
+          <Link class='text-reset mx-2 fw-bold' to='https://mdbootstrap.com/'>
+            JADSHUB.com
           </Link>
         </div>
       </footer>
