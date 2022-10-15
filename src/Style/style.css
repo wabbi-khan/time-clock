@@ -344,12 +344,14 @@ nav .showCart .showCartContainer .removeItems {
 .debit-bg .debit-content .debit-para {
   font-size: 30px;
   font-weight: 700;
+  text-align: center;
 }
 .debit-bg .debit-content .debit-para span {
   color: #f15a29;
 }
 .debit-bg .debit-content .debit-time {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
@@ -367,10 +369,4 @@ nav .showCart .showCartContainer .removeItems {
 .debit-bg .debit-content .debit-time .time-content div:nth-child(1) {
   font-size: 30px;
   font-weight: bold;
-}
-
-@media screen and (max-width: 600px) {
-  .debit-bg {
-    display: none;
-  }
 }/*# sourceMappingURL=style.css.map */

@@ -21,12 +21,14 @@
         .debit-para {
             font-size: 30px;
             font-weight: 700;
+            text-align: center;
             span {
                 color: $circleColor;
             }
         }
         .debit-time {
             display: flex;
+            flex-wrap: wrap;
             flex-direction: row;
             justify-content: space-evenly;
             align-items: center;
@@ -49,7 +51,10 @@
 }
 
 @media screen and (max-width: 600px) {
-    .debit-bg {
-        display: none;
-    }
+    // .debit-bg {
+    //     display: none;
+    // }
+    // .debit-time {
+    //     flex-direction: column;
+    // }
 }
