@@ -34,21 +34,35 @@ nav .nav-icons {
 nav .nav-icons li a {
   color: black;
 }
-nav .nav-icons .items {
+
+.mobTop {
+  display: none;
+}
+
+.mobcontent {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.items {
   position: relative;
+  width: 20px;
   margin: auto;
 }
-nav .nav-icons .items .totalProducts {
+.items .totalProducts {
   position: absolute;
   background-color: black;
   color: white;
   font-size: 12px;
+  text-align: center;
   width: 20px;
   height: 20px;
   margin: -30px 20px !important;
   border-radius: 50%;
 }
-nav .showCart {
+
+.showCart {
   width: 350px;
   height: 100vh;
   position: fixed;
@@ -56,33 +70,33 @@ nav .showCart {
   top: 0;
   right: 0;
 }
-nav .showCart .containerrr {
+.showCart .containerrr {
   background-color: #282a2c;
   height: 100vh;
   border-radius: 20px 20px;
 }
-nav .showCart .showCartContainer {
+.showCart .showCartContainer {
   margin-top: 20px;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-nav .showCart .showCartContainer .Backicon,
-nav .showCart .showCartContainer p {
+.showCart .showCartContainer .Backicon,
+.showCart .showCartContainer p {
   color: black;
 }
-nav .showCart .showCartContainer .removeItems {
+.showCart .showCartContainer .removeItems {
   color: white;
 }
-nav .showCart .showCartContainer .Backicon {
+.showCart .showCartContainer .Backicon {
   font-size: 25px !important;
 }
-nav .showCart .showCartContainer P {
+.showCart .showCartContainer P {
   font-weight: bold;
   font-size: 20px;
   letter-spacing: 2px;
 }
-nav .showCart .showCartContainer .removeItems {
+.showCart .showCartContainer .removeItems {
   padding: 5px 10px;
   background-color: black;
   border-radius: 10px;
@@ -90,13 +104,13 @@ nav .showCart .showCartContainer .removeItems {
 
 @media screen and (max-width: 600px) {
   .showCart {
-    width: 330px !important;
+    width: 320px !important;
   }
-  .nav-circle {
-    display: none;
+  nav {
+    display: none !important;
   }
-  .nav-icons li:nth-child(1) {
-    display: none;
+  .mobTop {
+    display: block;
   }
 }
 .hero .hero-left {
@@ -330,6 +344,11 @@ nav .showCart .showCartContainer .removeItems {
   font-size: 20px;
 }
 
+@media screen and (max-width: 600px) {
+  .cartitems {
+    width: 300px !important;
+  }
+}
 .debit-bg {
   background-image: url("../img/debit-bg.png");
   background-position: center;
@@ -398,6 +417,10 @@ nav .showCart .showCartContainer .removeItems {
     font-size: 10px !important;
   }
 }
+.mobHeader {
+  display: none;
+}
+
 .mainMob {
   position: fixed;
   bottom: 0%;
@@ -408,5 +431,13 @@ nav .showCart .showCartContainer .removeItems {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+}
+.mainMob .icon {
   font-size: 30px;
+}
+
+@media screen and (max-width: 600px) {
+  .mobHeader {
+    display: block;
+  }
 }/*# sourceMappingURL=style.css.map */
