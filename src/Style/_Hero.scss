@@ -37,25 +37,15 @@
             width: 400px;
         }
     }
-    // .hero-circle {
-    //     background-color: $circleColor;
-    //     width: 450px;
-    //     height: 450px;
-    //     border-radius: 50%;
-    //     position: absolute;
-    //     margin: -24rem 0rem 0rem 18rem;
-    // }
-    // img {
-    //     margin-left: 200px !important;
-    //     width: 400px;
-    //     z-index: 9999;
-    //     position: relative;
-    // }
 }
 
 @media screen and (max-width: 600px) {
     .hero {
         .hero-left {
+            .hero-btn {
+                width: 50% !important;
+                padding: 10px 20px !important;
+            }
             .hero-left-content {
                 line-height: 6ch;
             }
@@ -64,7 +54,7 @@
                 font-size: 1rem;
             }
             span {
-                font-size: 4rem !important;
+                font-size: 3rem !important;
             }
             p {
                 font-size: 13px;

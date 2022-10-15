@@ -1,3 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+}
+
 .nav-circle {
   width: 200px;
   height: 200px;
@@ -132,6 +137,10 @@ nav .showCart .showCartContainer .removeItems {
   .hero .hero-left {
     text-transform: uppercase;
   }
+  .hero .hero-left .hero-btn {
+    width: 50% !important;
+    padding: 10px 20px !important;
+  }
   .hero .hero-left .hero-left-content {
     line-height: 6ch;
   }
@@ -139,7 +148,7 @@ nav .showCart .showCartContainer .removeItems {
     font-size: 1rem;
   }
   .hero .hero-left span {
-    font-size: 4rem !important;
+    font-size: 3rem !important;
   }
   .hero .hero-left p {
     font-size: 13px;
@@ -382,5 +391,8 @@ nav .showCart .showCartContainer .removeItems {
   .debit-bg .debit-time .time-content div:nth-child(1) {
     font-size: 25px;
     font-weight: bold;
+  }
+  .debit-bg .debit-time .time-content div:nth-child(2) {
+    font-size: 10px !important;
   }
 }/*# sourceMappingURL=style.css.map */
