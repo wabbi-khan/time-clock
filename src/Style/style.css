@@ -90,6 +90,9 @@ nav .showCart .showCartContainer .removeItems {
 }
 
 @media screen and (max-width: 600px) {
+  .showCart {
+    width: 330px !important;
+  }
   .nav-circle {
     display: none;
   }

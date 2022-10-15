@@ -50,8 +50,6 @@ nav {
         height: 100vh;
         position: fixed;
         z-index: 9999;
-        // padding-bottom: 20px;
-        // background-color: $circleColor;
         top: 0;
         right: 0;
         .containerrr {
@@ -89,6 +87,9 @@ nav {
 }
 
 @media screen and (max-width: 600px) {
+    .showCart {
+        width: 330px !important;
+    }
     .nav-circle {
         display: none;
     }
