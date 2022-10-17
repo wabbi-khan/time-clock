@@ -1,6 +1,7 @@
 import React from "react";
 import "../Style/style.css";
 import WinterImg from "../img/winter.png";
+import Watches from "./Watches";
 const SpringWinter = () => {
   return (
     <div className='bg'>
@@ -27,6 +28,9 @@ const SpringWinter = () => {
               <div className='btn'>shop the look</div>
             </div>
           </div>
+        </div>
+        <div>
+          <Watches />
         </div>
       </div>
     </div>

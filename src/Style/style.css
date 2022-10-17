@@ -446,6 +446,7 @@ nav .nav-icons li a {
 }
 .winterSec .winterLeft {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: auto;
@@ -471,6 +472,24 @@ nav .nav-icons li a {
   color: white;
   padding: 10px 30px;
   border-radius: 50px;
+  text-transform: uppercase;
+}
+.winterSec .wacthHead {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  text-transform: uppercase;
+  line-height: 2ch;
+}
+.winterSec .wacthHead h1 {
+  font-size: 25px;
+}
+.winterSec .wacthHead span {
+  font-size: 50px;
+  font-weight: bold;
+  color: #f15a29;
 }
 
 @media screen and (max-width: 600px) {

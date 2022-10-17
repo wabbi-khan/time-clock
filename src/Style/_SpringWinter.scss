@@ -1,10 +1,15 @@
+@mixin center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
 .winterSec {
     padding: 100px 0px;
     .winterLeft {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: auto;
+        @include center();
         img {
             width: 350px;
         }
@@ -28,6 +33,20 @@
             color: white;
             padding: 10px 30px;
             border-radius: 50px;
+            text-transform: uppercase;
+        }
+    }
+    .wacthHead {
+        @include center();
+        text-transform: uppercase;
+        line-height: 2ch;
+        h1 {
+            font-size: 25px;
+        }
+        span {
+            font-size: 50px;
+            font-weight: bold;
+            color: $circleColor;
         }
     }
 }
@@ -39,11 +58,7 @@
         }
     }
     .winterRight {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: auto;
+        @include center();
         .heading {
             text-align: center;
             h2 {
