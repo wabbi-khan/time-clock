@@ -440,4 +440,55 @@ nav .nav-icons li a {
   .mobHeader {
     display: block;
   }
+}
+.winterSec {
+  padding: 100px 0px;
+}
+.winterSec .winterLeft {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.winterSec .winterLeft img {
+  width: 350px;
+}
+.winterSec .winterRight {
+  margin-top: 20px;
+}
+.winterSec .winterRight .heading h2 {
+  font-size: 40px;
+}
+.winterSec .winterRight .heading h2 span {
+  color: #f15a29;
+}
+.winterSec .winterRight .para {
+  width: 70%;
+  text-align: justify;
+}
+.winterSec .winterRight .btn {
+  background-color: #f15a29;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 50px;
+}
+
+@media screen and (max-width: 600px) {
+  .winterLeft img {
+    width: 300px !important;
+  }
+  .winterRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+  .winterRight .heading {
+    text-align: center;
+  }
+  .winterRight .heading h2 {
+    font-size: 25px;
+    font-weight: 500;
+  }
 }/*# sourceMappingURL=style.css.map */

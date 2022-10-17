@@ -1,0 +1,55 @@
+.winterSec {
+    padding: 100px 0px;
+    .winterLeft {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        img {
+            width: 350px;
+        }
+    }
+    .winterRight {
+        margin-top: 20px;
+        .heading {
+            h2 {
+                font-size: 40px;
+                span {
+                    color: $circleColor;
+                }
+            }
+        }
+        .para {
+            width: 70%;
+            text-align: justify;
+        }
+        .btn {
+            background-color: $circleColor;
+            color: white;
+            padding: 10px 30px;
+            border-radius: 50px;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .winterLeft {
+        img {
+            width: 300px !important;
+        }
+    }
+    .winterRight {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        .heading {
+            text-align: center;
+            h2 {
+                font-size: 25px;
+                font-weight: 500;
+            }
+        }
+    }
+}
