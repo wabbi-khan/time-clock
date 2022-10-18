@@ -10,9 +10,39 @@ const Watches = () => {
           </div>
         </div>
         <div className='col-md-12'>
-          <div className='watchBtnBg'>
-            <div className='watchIcnon'>icon</div>
-            <div className='watchName'>Rolex</div>
+          <div className='watchBtnContent'>
+            <div className='watchBtnBg'>
+              <div className='watchIcnon'>icon</div>
+              <div className='watchName mt-2'>Rolex</div>
+            </div>
+            <div className='watchBtnBg'>
+              <div className='watchIcnon'>icon</div>
+              <div className='watchName mt-2'>Rolex</div>
+            </div>
+            <div className='watchBtnBg'>
+              <div className='watchIcnon'>icon</div>
+              <div className='watchName mt-2'>Rolex</div>
+            </div>{" "}
+            <div className='watchBtnBg'>
+              <div className='watchIcnon'>icon</div>
+              <div className='watchName mt-2'>Rolex</div>
+            </div>{" "}
+            <div className='watchBtnBg'>
+              <div className='watchIcnon'>icon</div>
+              <div className='watchName mt-2'>Rolex</div>
+            </div>{" "}
+            <div className='watchBtnBg'>
+              <div className='watchIcnon'>icon</div>
+              <div className='watchName mt-2'>Rolex</div>
+            </div>{" "}
+            <div className='watchBtnBg'>
+              <div className='watchIcnon'>icon</div>
+              <div className='watchName mt-2'>Rolex</div>
+            </div>{" "}
+            <div className='watchBtnBg'>
+              <div className='watchIcnon'>icon</div>
+              <div className='watchName mt-2'>Rolex</div>
+            </div>
           </div>
         </div>
       </div>
