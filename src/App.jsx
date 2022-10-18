@@ -7,6 +7,7 @@ import About from "./pages/About";
 import "./App.css";
 import { CartProvider } from "react-use-cart";
 import MobileHeader from "./components/MobileHeader";
+import SpringWinter from "./components/SpringWinter";
 const App = () => {
   return (
     <CartProvider>
@@ -18,6 +19,7 @@ const App = () => {
             <Route path='/about' element={<About />} />
           </Routes>
         </div>
+        <SpringWinter />
         <Footer />
         <MobileHeader />
       </Router>
