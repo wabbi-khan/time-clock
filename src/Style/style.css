@@ -495,10 +495,6 @@ nav .nav-icons li a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  overflow-x: scroll;
-}
-.winterSec .watchBtnContent::-webkit-scrollbar {
-  display: none;
 }
 .winterSec .watchBtnContent .watchBtnBg {
   display: flex;
@@ -540,8 +536,10 @@ nav .nav-icons li a {
     font-size: 25px;
     font-weight: 500;
   }
+  .watchBtnContent {
+    overflow-x: scroll;
+  }
   .watchBtnContent .watchBtnBg {
-    cursor: pointer;
     margin-left: 10px;
   }
   .watchBtnContent .watchBtnBg .watchIcnon {

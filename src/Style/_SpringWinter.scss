@@ -53,10 +53,6 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        overflow-x: scroll;
-        &::-webkit-scrollbar {
-            display: none;
-        }
         .watchBtnBg {
             display: flex;
             flex-direction: column;
@@ -100,8 +96,8 @@
         }
     }
     .watchBtnContent {
+        overflow-x: scroll;
         .watchBtnBg {
-            cursor: pointer;
             margin-left: 10px;
             .watchIcnon {
                 color: white;
