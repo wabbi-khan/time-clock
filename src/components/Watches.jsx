@@ -1,5 +1,6 @@
 import React from "react";
 import { BsSmartwatch } from "react-icons/bs";
+import { WatchData } from "../utils/data";
 const Watches = () => {
   return (
     <div className='container mt-4'>
@@ -12,40 +13,12 @@ const Watches = () => {
         </div>
         <div className='col-md-12'>
           <div className='watchBtnContent'>
-            <div className='watchBtnBg'>
-              <div className='watchIcnon'>
-                <BsSmartwatch />
+            {WatchData.map((item) => (
+              <div className='watchBtnBg' key={item.id}>
+                <div className='watchIcnon'>{item.icon}</div>
+                <div className='watchName mt-2'> {item.name} </div>
               </div>
-              <div className='watchName mt-2'>Rolex</div>
-            </div>
-            <div className='watchBtnBg'>
-              <div className='watchIcnon'>icon</div>
-              <div className='watchName mt-2'>Rolex</div>
-            </div>
-            <div className='watchBtnBg'>
-              <div className='watchIcnon'>icon</div>
-              <div className='watchName mt-2'>Rolex</div>
-            </div>{" "}
-            <div className='watchBtnBg'>
-              <div className='watchIcnon'>icon</div>
-              <div className='watchName mt-2'>Rolex</div>
-            </div>{" "}
-            <div className='watchBtnBg'>
-              <div className='watchIcnon'>icon</div>
-              <div className='watchName mt-2'>Rolex</div>
-            </div>{" "}
-            <div className='watchBtnBg'>
-              <div className='watchIcnon'>icon</div>
-              <div className='watchName mt-2'>Rolex</div>
-            </div>{" "}
-            <div className='watchBtnBg'>
-              <div className='watchIcnon'>icon</div>
-              <div className='watchName mt-2'>Rolex</div>
-            </div>{" "}
-            <div className='watchBtnBg'>
-              <div className='watchIcnon'>icon</div>
-              <div className='watchName mt-2'>Rolex</div>
-            </div>
+            ))}
           </div>
         </div>
       </div>

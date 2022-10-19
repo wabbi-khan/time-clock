@@ -525,6 +525,9 @@ nav .nav-icons li a {
   background-color: white;
   color: rgb(36, 36, 36);
 }
+.winterSec .watchBtnContent .watchBtnBg:hover .watchName {
+  color: white;
+}
 
 @media screen and (max-width: 600px) {
   .winterLeft img {
