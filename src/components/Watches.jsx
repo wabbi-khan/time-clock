@@ -1,5 +1,6 @@
 import React from "react";
 import { WatchData } from "../utils/data";
+import { motion } from "framer-motion";
 const Watches = () => {
   return (
     <div className='container mt-4'>
@@ -13,10 +14,14 @@ const Watches = () => {
         <div className='col-md-12'>
           <div className='watchBtnContent'>
             {WatchData.map((item) => (
-              <div className='watchBtnBg' key={item.id}>
+              <motion.button
+                whileHover={{ scale: 1.2 }}
+                className='watchBtnBg'
+                key={item.id}
+              >
                 <div className='watchIcnon'>{item.icon}</div>
                 <div className='watchName mt-2'> {item.name} </div>
-              </div>
+              </motion.button>
             ))}
           </div>
         </div>
