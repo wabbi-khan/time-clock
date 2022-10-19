@@ -9,7 +9,7 @@ const ProductCard = ({ img, title, price, item }) => {
 
   return (
     <>
-      <div className='ProductCard ms-4'>
+      <div className='ProductCard m-4'>
         <div className='product-img'>
           <div className='wishlist container'>
             <div className='sells'>Sales</div>
@@ -29,6 +29,10 @@ const ProductCard = ({ img, title, price, item }) => {
         <div className='pro-details mt-4'>
           <div className='title '>{title}</div>
           <div className='price'>Rs. {price} </div>
+        </div>
+        <div className='my-2'>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae,
+          libero.
         </div>
         <div className='pro-details2 mt-4'>
           <div className='mainColor'>
