@@ -1,4 +1,5 @@
 import React from "react";
+import { BsSmartwatch } from "react-icons/bs";
 const Watches = () => {
   return (
     <div className='container mt-4'>
@@ -12,7 +13,9 @@ const Watches = () => {
         <div className='col-md-12'>
           <div className='watchBtnContent'>
             <div className='watchBtnBg'>
-              <div className='watchIcnon'>icon</div>
+              <div className='watchIcnon'>
+                <BsSmartwatch />
+              </div>
               <div className='watchName mt-2'>Rolex</div>
             </div>
             <div className='watchBtnBg'>

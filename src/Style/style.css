@@ -501,7 +501,7 @@ nav .nav-icons li a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: wheat;
+  background-color: white;
   padding: 20px 30px;
   border-radius: 10px;
   margin-top: 50px !important;
@@ -513,9 +513,17 @@ nav .nav-icons li a {
   align-items: center;
   background-color: #f15a29;
   color: white;
+  font-size: 30px;
   width: 50px;
   height: 50px;
   border-radius: 50%;
+}
+.winterSec .watchBtnContent .watchBtnBg:hover {
+  background-color: #f15a29;
+}
+.winterSec .watchBtnContent .watchBtnBg:hover .watchIcnon {
+  background-color: white;
+  color: rgb(36, 36, 36);
 }
 
 @media screen and (max-width: 600px) {
