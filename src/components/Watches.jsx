@@ -36,7 +36,7 @@ const Watches = () => {
           </div>
         </div>
         <div className='col-md-12'>
-          <div className='watchBtnContent'>
+          <div className='watchBtnContent my-4'>
             {WatchData.map((item) => (
               <motion.button
                 whileFocus={{ scale: 1.2 }}
