@@ -7,27 +7,37 @@ export const WatchData = [{
     },
     {
         id: 2,
-        name: "Rolex",
+        name: "Rado",
         icon: < BsSmartwatch / > ,
     },
     {
         id: 3,
-        name: "Rolex",
+        name: "Gshock",
         icon: < BsSmartwatch / > ,
     },
     {
         id: 4,
-        name: "Rolex",
+        name: "Ladies",
         icon: < BsSmartwatch / > ,
     },
     {
         id: 5,
-        name: "Rolex",
+        name: "Naviforce",
         icon: < BsSmartwatch / > ,
     },
     {
         id: 6,
-        name: "Rolex",
+        name: "Curren",
+        icon: < BsSmartwatch / > ,
+    },
+    {
+        id: 7,
+        name: "Sveston ",
+        icon: < BsSmartwatch / > ,
+    },
+    {
+        id: 8,
+        name: "Skmei ",
         icon: < BsSmartwatch / > ,
     },
 ];

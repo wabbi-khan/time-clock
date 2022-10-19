@@ -1,5 +1,4 @@
 import React from "react";
-import { BsSmartwatch } from "react-icons/bs";
 import { WatchData } from "../utils/data";
 const Watches = () => {
   return (

@@ -502,7 +502,8 @@ nav .nav-icons li a {
   justify-content: center;
   align-items: center;
   background-color: white;
-  padding: 20px 30px;
+  width: 110px;
+  height: 130px;
   border-radius: 10px;
   margin-top: 50px !important;
   cursor: pointer;
@@ -526,6 +527,26 @@ nav .nav-icons li a {
   color: rgb(36, 36, 36);
 }
 .winterSec .watchBtnContent .watchBtnBg:hover .watchName {
+  color: white;
+}
+.winterSec .watchBtnContent .watchBtnBg:focus {
+  background-color: #f15a29;
+}
+.winterSec .watchBtnContent .watchBtnBg:focus .watchIcnon {
+  background-color: white;
+  color: rgb(36, 36, 36);
+}
+.winterSec .watchBtnContent .watchBtnBg:focus .watchName {
+  color: white;
+}
+.winterSec .watchBtnContent .watchBtnBg:active {
+  background-color: #f15a29;
+}
+.winterSec .watchBtnContent .watchBtnBg:active .watchIcnon {
+  background-color: white;
+  color: rgb(36, 36, 36);
+}
+.winterSec .watchBtnContent .watchBtnBg:active .watchName {
   color: white;
 }
 
@@ -552,6 +573,7 @@ nav .nav-icons li a {
   }
   .watchBtnContent .watchBtnBg {
     margin-left: 10px;
+    padding: 20px 30px;
   }
   .watchBtnContent .watchBtnBg .watchIcnon {
     color: white;
