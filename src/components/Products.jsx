@@ -1,22 +1,23 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import ProductCard from "./ProductCard";
 import "./../Style/style.css";
-import axios from "axios";
+// import axios from "axios";
+import { productsData } from "../utils/products";
 
 const Products = () => {
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    const fetchingProducts = async () => {
-      try {
-        const res = await axios.get("http://localhost:5000/products");
-        console.log(res.data);
-        setData(res.data);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-    fetchingProducts();
-  }, []);
+  // const [data, setData] = useState([]);
+  // useEffect(() => {
+  //   const fetchingProducts = async () => {
+  //     try {
+  //       const res = await axios.get("http://localhost:5000/products");
+  //       console.log(res.data);
+  //       setData(res.data);
+  //     } catch (err) {
+  //       console.log(err);
+  //     }
+  //   };
+  //   fetchingProducts();
+  // }, []);
   return (
     <div className='container mt-4'>
       <div className='proHeading col-md-12'>
@@ -30,7 +31,7 @@ const Products = () => {
       <div className='row text-center mainRow'>
         <div className='col-md-12 product-right mb-4'>
           <div className=' d-flex'>
-            {data.map((item) => (
+            {productsData.map((item) => (
               <ProductCard
                 key={item}
                 title={item.title}
