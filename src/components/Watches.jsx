@@ -15,6 +15,7 @@ const Watches = () => {
           <div className='watchBtnContent'>
             {WatchData.map((item) => (
               <motion.button
+                whileFocus={{ scale: 1.2 }}
                 whileHover={{ scale: 1.2 }}
                 className='watchBtnBg'
                 key={item.id}
