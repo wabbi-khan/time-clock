@@ -1,7 +1,7 @@
 export const productsData = [{
         id: 1,
         price: 100,
-        title: "Sport",
+        title: "Rolex",
         sub_cat: "ladies",
         Image: "https://res.cloudinary.com/xcltech/image/upload/v1665471244/100/watch3_ry3g5z.jpg",
     },
@@ -21,7 +21,7 @@ export const productsData = [{
     },
     {
         id: 4,
-        title: "G-Shock",
+        title: "Gshock",
         price: 400,
         sub_cat: "ladies",
         Image: "https://res.cloudinary.com/xcltech/image/upload/v1665471244/100/watch3_ry3g5z.jpg",
@@ -34,7 +34,7 @@ export const productsData = [{
         Image: "https://res.cloudinary.com/xcltech/image/upload/v1665471245/100/watch2_y0arqt.jpg",
     },
     {
-        id: 1,
+        id: 6,
         title: "Naviforce",
         price: 300,
         sub_cat: "ladies",

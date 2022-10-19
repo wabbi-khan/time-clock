@@ -51,9 +51,9 @@ const Watches = () => {
             ))}
           </div>
         </div>
-        <div className='row mt-4'>
-          <div className='col-md-12'>
-            <div className=' d-flex scroll-x'>
+        <div className='row text-center mainRow mt-4'>
+          <div className='col-md-12 product-right mb-4'>
+            <div className=' d-flex'>
               {items.map((item) => (
                 <ProductCard
                   key={item}

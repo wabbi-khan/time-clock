@@ -32,7 +32,7 @@ export const WatchData = [{
     },
     {
         id: 7,
-        name: "Sveston ",
+        name: "Sveston",
         icon: < BsSmartwatch / > ,
     },
     {
