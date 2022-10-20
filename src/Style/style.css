@@ -3,15 +3,6 @@
   font-family: "Poppins", sans-serif;
 }
 
-.nav-circle {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background-color: #f15a29;
-  position: absolute;
-  margin: -9rem 0px 2px 0rem;
-}
-
 nav .nav-item a {
   color: #141414;
   font-weight: 400;
@@ -33,6 +24,17 @@ nav .nav-icons {
 }
 nav .nav-icons li a {
   color: black;
+}
+nav .nav-circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #f15a29;
+  position: absolute;
+  margin: -9rem 0px 2px 0rem;
+}
+nav .searchIcon {
+  z-index: 1;
 }
 
 .mobTop {

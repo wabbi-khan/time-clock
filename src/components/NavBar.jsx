@@ -48,23 +48,23 @@ const NavBar = () => {
                 </Link>
               </li>
               <li className='nav-item ms-4'>
-                <Link className='nav-link' to={"/about"}>
+                <Link className='nav-link' to={"/"}>
                   Features
                 </Link>
               </li>
               <li className='nav-item ms-4'>
-                <Link className='nav-link' href='#'>
+                <Link className='nav-link' to={"/"}>
                   Pricing
                 </Link>
               </li>{" "}
               <li className='nav-item ms-4'>
-                <Link className='nav-link' href='#'>
-                  Pricing
+                <Link className='nav-link' to={"/"}>
+                  About
                 </Link>
               </li>{" "}
               <li className='nav-item ms-4'>
-                <Link className='nav-link' href='#'>
-                  Pricing
+                <Link className='nav-link' to={"/"}>
+                  Contact
                 </Link>
               </li>{" "}
               <li className='nav-item'>
@@ -72,8 +72,8 @@ const NavBar = () => {
               </li>
             </ul>
             <ul className='navbar-nav me-4 text-center nav-icons'>
-              <li className='nav-item '>
-                <Link className='nav-link' to={"/"}>
+              <li className='nav-item'>
+                <Link className='nav-link ' to={"/"}>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
                     width='20'
