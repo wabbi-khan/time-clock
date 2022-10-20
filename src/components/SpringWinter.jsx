@@ -4,8 +4,8 @@ import WinterImg from "../img/winter.png";
 import Watches from "./Watches";
 const SpringWinter = () => {
   return (
-    <div className='bg'>
-      <div className='container '>
+    <div className='springBg'>
+      <div className='container'>
         <div className='winterSec'>
           <div className='row'>
             <div className='col-md-6'>
@@ -30,8 +30,10 @@ const SpringWinter = () => {
               </div>
             </div>
           </div>
-          <div>
-            <Watches />
+          <div className='row'>
+            <div className='col-md-12'>
+              <Watches />
+            </div>
           </div>
         </div>
       </div>

@@ -27,10 +27,10 @@ const Watches = () => {
     setItems(updateItems);
   };
   return (
-    <div className='container mt-4'>
+    <div className='container mt-4 pb-4'>
       <div className='row'>
         <div className='col-md-12'>
-          <div className='wacthHead'>
+          <div className='wacthHead mt-4'>
             <h1>everyone's desires</h1>
             <span>Watches</span>
           </div>
@@ -51,21 +51,24 @@ const Watches = () => {
             ))}
           </div>
         </div>
-        <div className='row text-center  mt-4'>
-          <div className='col-md-12 mb-4'>
-            <div className='d-flex flex-wrap align-items-center justify-content-center'>
-              {items.map((item) => (
-                <ProductCard
-                  key={item}
-                  title={item.title}
-                  price={item.price}
-                  img={item?.Image}
-                  item={item}
-                />
-              ))}
-            </div>
+        {/* <div className='row text-center  mt-4'> */}
+        <div className='col-md-12'>
+          <div
+            className='d-flex flex-wrap align-items-center justify-content-center text-center'
+            style={{ paddingBottom: "30px" }}
+          >
+            {items.map((item) => (
+              <ProductCard
+                key={item}
+                title={item.title}
+                price={item.price}
+                img={item?.Image}
+                item={item}
+              />
+            ))}
           </div>
         </div>
+        {/* </div> */}
       </div>
     </div>
   );

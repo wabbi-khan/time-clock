@@ -5,5 +5,13 @@
     background-repeat: no-repeat;
     background-size: 100rem;
     width: 100%;
-    height: 300%;
+    height: 100%;
+}
+
+.springBg {
+    background-image: url("./img/bg.png");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
 }
