@@ -30,7 +30,8 @@ nav {
         margin: -9rem 0px 2px 0rem;
     }
     .searchIcon {
-        z-index: 1;
+        z-index: 9999 !important;
+        position: absolute;
     }
 }
 
@@ -107,6 +108,15 @@ nav {
     .showCart {
         width: 320px !important;
     }
+    nav {
+        display: none !important;
+    }
+    .mobTop {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 768px) {
     nav {
         display: none !important;
     }
