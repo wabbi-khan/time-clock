@@ -6,8 +6,13 @@ const Footer = () => {
   return (
     <>
       <footer class='text-center text-lg-start bg-light text-muted'>
-        <div className='container text-center mt-4'>
-          <motion.img whileHover={{ scale: 1.3 }} src={Logo} alt='logo' />
+        <div className='container text-center'>
+          <motion.img
+            whileHover={{ scale: 1.3 }}
+            src={Logo}
+            alt='logo'
+            className='mt-4'
+          />
         </div>
         <section class='d-flex justify-content-center border-bottom'>
           <div>
