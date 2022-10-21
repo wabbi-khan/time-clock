@@ -41,6 +41,25 @@ nav {
             cursor: pointer;
             border-radius: 50%;
         }
+        .drop {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(255, 232, 232);
+            border-radius: 5px;
+            margin-top: 10px;
+            right: 0;
+            width: 120px;
+            height: 100px;
+            a {
+                text-decoration: none;
+            }
+            p {
+                cursor: pointer;
+            }
+        }
     }
 }
 

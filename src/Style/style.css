@@ -46,6 +46,25 @@ nav .avatar img {
   cursor: pointer;
   border-radius: 50%;
 }
+nav .avatar .drop {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 232, 232);
+  border-radius: 5px;
+  margin-top: 10px;
+  right: 0;
+  width: 120px;
+  height: 100px;
+}
+nav .avatar .drop a {
+  text-decoration: none;
+}
+nav .avatar .drop p {
+  cursor: pointer;
+}
 
 .mobTop {
   display: none;
