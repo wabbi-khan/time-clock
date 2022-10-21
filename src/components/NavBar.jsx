@@ -8,6 +8,7 @@ import "./../Style/style.css";
 import { useCart } from "react-use-cart";
 // import CartItems from "./CartItems";
 import CartContainer from "./CartContainer";
+import Avatar from "../img/avatar.png";
 const NavBar = () => {
   const { totalItems } = useCart();
   const [isMenu, setIsMenu] = useState(false);
@@ -71,8 +72,8 @@ const NavBar = () => {
                 <div className='nav-circle'></div>
               </li>
             </ul>
-            <ul className='navbar-nav me-4 text-center nav-icons'>
-              <li className='nav-item'>
+            <ul className='navbar-nav text-center nav-icons'>
+              <li className='nav-item mx-4'>
                 <Link className='nav-link' to={"/"}>
                   <div className='searchIcon'>
                     <svg
@@ -88,7 +89,7 @@ const NavBar = () => {
                   </div>
                 </Link>
               </li>
-              <li className='nav-item ms-4'>
+              <li className='nav-item mx-4'>
                 <Link className='nav-link' to={"/"}>
                   <div className='items' onClick={() => setIsMenu(!isMenu)}>
                     <svg
@@ -108,6 +109,15 @@ const NavBar = () => {
                   </div>
                   {isMenu && <CartContainer close={() => setIsMenu(!isMenu)} />}
                 </Link>
+              </li>
+              <li className='nav-item mx-4'>
+                <div className='avatar'>
+                  <motion.img
+                    whileTap={{ scale: 0.6 }}
+                    src={Avatar}
+                    alt='Avatar'
+                  />
+                </div>
               </li>
             </ul>
           </div>

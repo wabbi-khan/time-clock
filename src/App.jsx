@@ -7,20 +7,23 @@ import "./App.css";
 import { CartProvider } from "react-use-cart";
 import MobileHeader from "./components/MobileHeader";
 import SpringWinter from "./components/SpringWinter";
+import { AnimatePresence } from "framer-motion";
 const App = () => {
   return (
     <CartProvider>
-      <Router>
-        <div className='bg'>
-          <NavBar />
-          <Routes>
-            <Route path='/' element={<Home />} />
-          </Routes>
-        </div>
-        <SpringWinter />
-        <Footer />
-        <MobileHeader />
-      </Router>
+      <AnimatePresence>
+        <Router>
+          <div className='bg'>
+            <NavBar />
+            <Routes>
+              <Route path='/' element={<Home />} />
+            </Routes>
+          </div>
+          <SpringWinter />
+          <Footer />
+          <MobileHeader />
+        </Router>
+      </AnimatePresence>
     </CartProvider>
   );
 };
