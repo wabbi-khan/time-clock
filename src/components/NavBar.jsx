@@ -172,9 +172,9 @@ const NavBar = () => {
           <div className='col-md-12'>
             <div className='mobcontent'>
               <div>
-                <img src={Logo} width={150} alt='log' />
+                <img src={Logo} width={125} alt='log' />
               </div>
-              <div className='nav-item ms-4'>
+              <div className='nav-item '>
                 <div className='items' onClick={() => setIsMenu(!isMenu)}>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
@@ -190,6 +190,29 @@ const NavBar = () => {
                   <div className='totalProducts text-center'>{totalItems}</div>
                 </div>
                 {isMenu && <CartContainer close={() => setIsMenu(!isMenu)} />}
+              </div>
+              <div className='avatar'>
+                <motion.img
+                  whileTap={{ scale: 0.6 }}
+                  src={user ? user.photoURL : Avatar}
+                  alt='Avatar'
+                  referrerPolicy='no-referrer'
+                  onClick={Login}
+                />
+                {dropDown && (
+                  <div className='drop'>
+                    {user && user.email === "kwahab789@gmail.com" && (
+                      <Link to={"/createProducts"}>
+                        <p>
+                          New Item <MdAdd />
+                        </p>
+                      </Link>
+                    )}
+                    <p onClick={Logout}>
+                      Logout <MdLogout />
+                    </p>
+                  </div>
+                )}
               </div>
             </div>
           </div>

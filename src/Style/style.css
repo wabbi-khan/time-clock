@@ -37,16 +37,17 @@ nav .searchIcon {
   z-index: 9999 !important;
   position: absolute;
 }
-nav .avatar {
+
+.avatar {
   position: relative;
 }
-nav .avatar img {
+.avatar img {
   width: 40px;
   filter: drop-shadow(3px 3px 3px rgb(94, 94, 94));
   cursor: pointer;
   border-radius: 50%;
 }
-nav .avatar .drop {
+.avatar .drop {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -59,10 +60,10 @@ nav .avatar .drop {
   width: 120px;
   height: 100px;
 }
-nav .avatar .drop a {
+.avatar .drop a {
   text-decoration: none;
 }
-nav .avatar .drop p {
+.avatar .drop p {
   cursor: pointer;
 }
 
@@ -72,6 +73,7 @@ nav .avatar .drop p {
 
 .mobcontent {
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
 }
