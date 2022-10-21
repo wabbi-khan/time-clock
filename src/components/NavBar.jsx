@@ -1,12 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "./../img/logo.png";
-// import { MdOutlineKeyboardBackspace } from "react-icons/md";
-// import { RiRefreshFill } from "react-icons/ri";
 import { motion } from "framer-motion";
 import "./../Style/style.css";
 import { useCart } from "react-use-cart";
-// import CartItems from "./CartItems";
 import CartContainer from "./CartContainer";
 import Avatar from "../img/avatar.png";
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
@@ -23,7 +20,7 @@ const NavBar = () => {
   const [{ user }, dispatch] = useStateValue();
   const Login = async () => {
     const {
-      user: { refreshToken, providerData },
+      user: { providerData },
     } = await signInWithPopup(firebaseAuth, provider);
     // console.log(res);
     dispatch({
@@ -33,8 +30,6 @@ const NavBar = () => {
   };
   return (
     <>
-      {/* <div className='nav-circle'></div> */}
-
       <nav className='container navbar navbar-expand-lg bg-transparent'>
         <div className='container-fluid'>
           <Link className='navbar-brand' to={"/"}>
@@ -152,7 +147,6 @@ const NavBar = () => {
                 <img src={Logo} width={150} alt='log' />
               </div>
               <div className='nav-item ms-4'>
-                {/* <Link className='nav-link' to={"/"}> */}
                 <div className='items' onClick={() => setIsMenu(!isMenu)}>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
@@ -168,7 +162,6 @@ const NavBar = () => {
                   <div className='totalProducts text-center'>{totalItems}</div>
                 </div>
                 {isMenu && <CartContainer close={() => setIsMenu(!isMenu)} />}
-                {/* </Link> */}
               </div>
             </div>
           </div>
