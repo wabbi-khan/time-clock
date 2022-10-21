@@ -44,6 +44,7 @@ nav .avatar img {
   width: 40px;
   filter: drop-shadow(3px 3px 3px rgb(94, 94, 94));
   cursor: pointer;
+  border-radius: 50%;
 }
 
 .mobTop {

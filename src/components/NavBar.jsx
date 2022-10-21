@@ -11,6 +11,8 @@ import CartContainer from "./CartContainer";
 import Avatar from "../img/avatar.png";
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { app } from "../firebase.config";
+import { useStateValue } from "../context/StateProvider";
+import { actionType } from "../context/reducer";
 
 const NavBar = () => {
   const firebaseAuth = getAuth(app);
@@ -18,9 +20,16 @@ const NavBar = () => {
   const { totalItems } = useCart();
   const [isMenu, setIsMenu] = useState(false);
   // * Login user
+  const [{ user }, dispatch] = useStateValue();
   const Login = async () => {
-    const res = await signInWithPopup(firebaseAuth, provider);
-    console.log(res);
+    const {
+      user: { refreshToken, providerData },
+    } = await signInWithPopup(firebaseAuth, provider);
+    // console.log(res);
+    dispatch({
+      type: actionType.SET_USER,
+      user: providerData[0],
+    });
   };
   return (
     <>
@@ -124,8 +133,9 @@ const NavBar = () => {
                 <div className='avatar'>
                   <motion.img
                     whileTap={{ scale: 0.6 }}
-                    src={Avatar}
+                    src={user ? user.photoURL : Avatar}
                     alt='Avatar'
+                    referrerpolicy='no-referrer'
                     onClick={Login}
                   />
                 </div>
