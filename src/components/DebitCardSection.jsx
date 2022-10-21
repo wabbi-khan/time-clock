@@ -5,7 +5,7 @@ const DebitCardSection = () => {
   const hrs = time.getHours();
   const min = time.getMinutes();
   const sec = time.getSeconds();
-  console.log(hrs);
+  // console.log(hrs);
 
   return (
     <div className='debit-bg'>
