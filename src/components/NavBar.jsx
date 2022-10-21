@@ -9,9 +9,19 @@ import { useCart } from "react-use-cart";
 // import CartItems from "./CartItems";
 import CartContainer from "./CartContainer";
 import Avatar from "../img/avatar.png";
+import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { app } from "../firebase.config";
+
 const NavBar = () => {
+  const firebaseAuth = getAuth(app);
+  const provider = new GoogleAuthProvider(app);
   const { totalItems } = useCart();
   const [isMenu, setIsMenu] = useState(false);
+  // * Login user
+  const Login = async () => {
+    const res = await signInWithPopup(firebaseAuth, provider);
+    console.log(res);
+  };
   return (
     <>
       {/* <div className='nav-circle'></div> */}
@@ -116,6 +126,7 @@ const NavBar = () => {
                     whileTap={{ scale: 0.6 }}
                     src={Avatar}
                     alt='Avatar'
+                    onClick={Login}
                   />
                 </div>
               </li>

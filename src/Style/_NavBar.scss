@@ -33,10 +33,13 @@ nav {
         z-index: 9999 !important;
         position: absolute;
     }
-    .avatar img {
-        width: 40px;
-        filter: drop-shadow(3px 3px 3px rgb(94, 94, 94));
-        cursor: pointer;
+    .avatar {
+        position: relative;
+        img {
+            width: 40px;
+            filter: drop-shadow(3px 3px 3px rgb(94, 94, 94));
+            cursor: pointer;
+        }
     }
 }
 

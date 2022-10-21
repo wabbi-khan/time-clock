@@ -4,7 +4,6 @@ import { BiMinus, BiPlus } from "react-icons/bi";
 import { useCart } from "react-use-cart";
 const CartItems = () => {
   const { isEmpty, items, updateItemQuantity } = useCart();
-  console.log(items);
   if (isEmpty)
     return (
       <h3 className='text-center text-light mt-4 pt-4'>Your Cart Is Empty</h3>
