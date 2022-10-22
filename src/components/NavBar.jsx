@@ -22,7 +22,7 @@ const NavBar = () => {
   const Login = async () => {
     if (!user) {
       const {
-        user: { refreshToken, providerData },
+        user: { providerData },
       } = await signInWithPopup(firebaseAuth, provider);
       dispatch({
         type: actionType.SET_USER,
@@ -203,7 +203,7 @@ const NavBar = () => {
                   <div className='drop'>
                     {user && user.email === "kwahab789@gmail.com" && (
                       <Link to={"/createProducts"}>
-                        <p>
+                        <p onClick={() => setDropDown(false)}>
                           New Item <MdAdd />
                         </p>
                       </Link>
