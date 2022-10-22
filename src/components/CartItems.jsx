@@ -17,7 +17,7 @@ const CartItems = () => {
             <div className='container cartitems'>
               <div className='cartitemImg'>
                 <img
-                  src={item.Image}
+                  src={item.imageUrl}
                   alt='cartimg'
                   width={50}
                   height={50}

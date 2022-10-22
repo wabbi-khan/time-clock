@@ -1,10 +1,35 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ProductCard from "./ProductCard";
 import "./../Style/style.css";
+import { useStateValue } from "../context/StateProvider";
+import { AllWatchItems } from "../utils/firebaseFunction";
 // import axios from "axios";
-import { productsData } from "../utils/products";
+// import { productsData } from "../utils/products";
+import {
+  collection,
+  doc,
+  getDocs,
+  orderBy,
+  query,
+  setDoc,
+} from "firebase/firestore";
+import { firestore } from "../firebase.config";
 
 const Products = () => {
+  const [data, setData] = useState([]);
+  // const [{ watchItems }] = useStateValue();
+  // console.log(watchItems);
+  useEffect(() => {
+    const AllWatchItems = async () => {
+      const items = await getDocs(
+        query(collection(firestore, "watchItems"), orderBy("id", "desc"))
+      );
+      const Data = items.docs.map((doc) => doc.data());
+      setData(Data);
+    };
+    AllWatchItems();
+  }, []);
+
   // const [data, setData] = useState([]);
   // useEffect(() => {
   //   const fetchingProducts = async () => {
@@ -31,12 +56,12 @@ const Products = () => {
       <div className='row text-center mainRow'>
         <div className='col-md-12 product-right mb-4'>
           <div className=' d-flex'>
-            {productsData.map((item) => (
+            {data.map((item) => (
               <ProductCard
                 key={item}
                 title={item.title}
                 price={item.price}
-                img={item?.Image}
+                img={item?.imageUrl}
                 item={item}
               />
             ))}

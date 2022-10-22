@@ -15,6 +15,9 @@ import {
   uploadBytesResumable,
 } from "firebase/storage";
 import { saveItems } from "../utils/firebaseFunction";
+import { useStateValue } from "../context/StateProvider";
+import { AllWatchItems } from "../utils/firebaseFunction";
+import { actionType } from "../context/reducer";
 const CreateProduct = () => {
   const [title, setTitle] = useState("");
   const [price, setPrice] = useState("");
@@ -24,6 +27,7 @@ const CreateProduct = () => {
   const [alertStatus, setAlertStatus] = useState("danger");
   const [msg, setMsg] = useState(null);
   const [Loading, setLoading] = useState(false);
+  const [{ watchItems }, dispatch] = useStateValue();
   const uploadImage = (e) => {
     setLoading(true);
     const imageFile = e.target.files[0];
@@ -34,6 +38,7 @@ const CreateProduct = () => {
       (snapshot) => {
         const uploadProgress =
           (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+        console.log(uploadProgress);
       },
       (error) => {
         console.log(error);
@@ -113,12 +118,22 @@ const CreateProduct = () => {
         setLoading(false);
       }, 4000);
     }
+    fetchData();
   };
   const clearData = () => {
     setTitle("");
     setCategory("Select Category");
     setImageAsset(null);
     setPrice("");
+  };
+
+  const fetchData = async () => {
+    await AllWatchItems().then((data) => {
+      dispatch({
+        type: actionType.SET_WATCH_ITEMS,
+        watchItems: data,
+      });
+    });
   };
   return (
     <div className='container mt-4 pt-4'>
