@@ -14,6 +14,7 @@ import {
   ref,
   uploadBytesResumable,
 } from "firebase/storage";
+import { saveItems } from "../utils/firebaseFunction";
 const CreateProduct = () => {
   const [title, setTitle] = useState("");
   const [price, setPrice] = useState("");
@@ -37,7 +38,7 @@ const CreateProduct = () => {
       (error) => {
         console.log(error);
         setFields(true);
-        setMsg("Error while uploading : Try again 🎉");
+        setMsg("Error while uploading : Try again ☹");
         setAlertStatus("danger");
         setTimeout(() => {
           setFields(false);
@@ -58,8 +59,67 @@ const CreateProduct = () => {
       }
     );
   };
-  const deleteImage = () => {};
-  const saveDetails = () => {};
+  const deleteImage = () => {
+    setLoading(true);
+    const deleteRef = ref(storage, imageAsset);
+    deleteObject(deleteRef).then(() => {
+      setImageAsset(null);
+      setLoading(false);
+      setFields(true);
+      setMsg("image deleted successfully 😍");
+      setAlertStatus("success");
+      setTimeout(() => {
+        setFields(false);
+      }, 4000);
+    });
+  };
+  const saveDetails = () => {
+    setLoading(true);
+    try {
+      if (!title || !imageAsset || !price || !category) {
+        setFields(true);
+        setMsg("Requied fields can't be empty");
+        setAlertStatus("danger");
+        setTimeout(() => {
+          setFields(false);
+          setLoading(false);
+        }, 4000);
+      } else {
+        const data = {
+          id: `${Date.now()}`,
+          title: title,
+          imageUrl: imageAsset,
+          category: category,
+          qty: 1,
+          price: price,
+        };
+        saveItems(data);
+        setLoading(false);
+        setFields(true);
+        setMsg("Data uploaded successfully 😍");
+        setAlertStatus("success");
+        clearData();
+        setTimeout(() => {
+          setFields(false);
+        }, 4000);
+      }
+    } catch (error) {
+      console.log(error);
+      setFields(true);
+      setMsg("Error while uploading : Try again ☹");
+      setAlertStatus("danger");
+      setTimeout(() => {
+        setFields(false);
+        setLoading(false);
+      }, 4000);
+    }
+  };
+  const clearData = () => {
+    setTitle("");
+    setCategory("Select Category");
+    setImageAsset(null);
+    setPrice("");
+  };
   return (
     <div className='container mt-4 pt-4'>
       <div className='row'>
