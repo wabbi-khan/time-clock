@@ -14,28 +14,30 @@ import {
   setDoc,
 } from "firebase/firestore";
 import { firestore } from "../firebase.config";
-
+import { AllWatchItems } from "../utils/firebaseFunction";
 const Watches = () => {
+  // const { items } = AllWatchItems();
+  const [{ watchItems }] = useStateValue();
+  console.log(watchItems);
   const [data, setData] = useState([]);
-  // const [{ watchItems }] = useStateValue();
-  useEffect(() => {
-    const AllWatchItems = async () => {
-      const items = await getDocs(
-        query(collection(firestore, "watchItems"), orderBy("id", "desc"))
-      );
-      const Data = items.docs.map((doc) => doc.data());
-      setData(Data);
-    };
-    AllWatchItems();
-    filterItems();
-  }, []);
+  // const [filterData, setFilterData] = useState([]);
+  // // const [{ watchItems }] = useStateValue();
+  // useEffect(() => {
+  //   const AllWatchItems = async () => {
+  //     const items = await getDocs(
+  //       query(collection(firestore, "watchItems"), orderBy("id", "desc"))
+  //     );
+  //     const Data = items.docs.map((doc) => doc.data());
+  //     setData(Data);
+  //   };
+  //   AllWatchItems();
+  // }, []);
   const filterItems = (name) => {
-    const filter = data?.filter((n) => n.title === name);
+    const filter = watchItems?.filter((n) => n.title === name);
     setData(filter);
   };
-  // useEffect(() => {
-  // });
-  console.log(data);
+
+  // console.log(data);
   return (
     <div className='container mt-4 pb-4'>
       <div className='row'>

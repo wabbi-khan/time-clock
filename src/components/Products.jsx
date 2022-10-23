@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import ProductCard from "./ProductCard";
 import "./../Style/style.css";
-import { useStateValue } from "../context/StateProvider";
-import { AllWatchItems } from "../utils/firebaseFunction";
+// import { useStateValue } from "../context/StateProvider";
+// import { AllWatchItems } from "../utils/firebaseFunction";
 // import axios from "axios";
 // import { productsData } from "../utils/products";
 import {
