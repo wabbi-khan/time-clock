@@ -1,31 +1,41 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { WatchData } from "../utils/data";
 import { motion } from "framer-motion";
 import ProductCard from "./ProductCard";
-import { productsData } from "../utils/products";
+// import { productsData } from "../utils/products";
+import { useStateValue } from "../context/StateProvider";
 // import axios from "axios";
+import {
+  collection,
+  doc,
+  getDocs,
+  orderBy,
+  query,
+  setDoc,
+} from "firebase/firestore";
+import { firestore } from "../firebase.config";
+
 const Watches = () => {
-  const [items, setItems] = useState(productsData);
-  // console.log(productsData);
-  // const [data, setData] = useState([]);
-  // useEffect(() => {
-  //   const fetchingProducts = async () => {
-  //     try {
-  //       const res = await axios.get("http://localhost:5000/products");
-  //       console.log(res.data);
-  //       setData(res.data);
-  //     } catch (err) {
-  //       console.log(err);
-  //     }
-  //   };
-  //   fetchingProducts();
-  // }, []);
-  const FilterItems = (nameItem) => {
-    const updateItems = productsData.filter(
-      (currentName) => currentName.title === nameItem
-    );
-    setItems(updateItems);
+  const [data, setData] = useState([]);
+  // const [{ watchItems }] = useStateValue();
+  useEffect(() => {
+    const AllWatchItems = async () => {
+      const items = await getDocs(
+        query(collection(firestore, "watchItems"), orderBy("id", "desc"))
+      );
+      const Data = items.docs.map((doc) => doc.data());
+      setData(Data);
+    };
+    AllWatchItems();
+    filterItems();
+  }, []);
+  const filterItems = (name) => {
+    const filter = data?.filter((n) => n.title === name);
+    setData(filter);
   };
+  // useEffect(() => {
+  // });
+  console.log(data);
   return (
     <div className='container mt-4 pb-4'>
       <div className='row'>
@@ -43,7 +53,7 @@ const Watches = () => {
                 whileHover={{ scale: 1.2 }}
                 className='watchBtnBg'
                 key={item.id}
-                onClick={() => FilterItems(item.name)}
+                onClick={() => filterItems(item.name)}
               >
                 <div className='watchIcnon'>{item.icon}</div>
                 <div className='watchName mt-2'> {item.name} </div>
@@ -57,12 +67,12 @@ const Watches = () => {
             className='d-flex flex-wrap align-items-center justify-content-center text-center'
             style={{ paddingBottom: "30px" }}
           >
-            {items.map((item) => (
+            {data.map((item) => (
               <ProductCard
                 key={item}
                 title={item.title}
                 price={item.price}
-                img={item?.Image}
+                img={item?.imageUrl}
                 item={item}
               />
             ))}
