@@ -5,17 +5,26 @@ import ProductCard from "./ProductCard";
 import { collection, getDocs, orderBy, query } from "firebase/firestore";
 import { firestore } from "../firebase.config";
 const Watches = () => {
-  const [data, setData] = useState('Rolex');
+  const [data, setData] = useState([]);
+  const [filterData, setFilterData] = useState([]);
   useEffect(() => {
-    const AllWatchItems = async (name) => {
+    const AllWatchItems = async () => {
       const items = await getDocs(
         query(collection(firestore, "watchItems"), orderBy("id", "desc"))
       );
       const Data = items.docs.map((doc) => doc.data());
       setData(Data);
+      setFilterData(Data);
     };
     AllWatchItems();
+    FilterData();
   }, []);
+
+  const FilterData = (nameItem) => {
+    console.log(nameItem);
+    const lala = data?.filter((e) => e.title === nameItem);
+    setFilterData(lala);
+  };
 
   console.log(data);
   return (
@@ -34,8 +43,8 @@ const Watches = () => {
                 whileFocus={{ scale: 1.2 }}
                 whileHover={{ scale: 1.2 }}
                 className='watchBtnBg'
+                onClick={() => FilterData(item.name)}
                 key={item.id}
-                onClick={() => data.filter((e) => e.title === item.name)}
               >
                 <div className='watchIcnon'>{item.icon}</div>
                 <div className='watchName mt-2'> {item.name} </div>
@@ -49,7 +58,7 @@ const Watches = () => {
             className='d-flex flex-wrap align-items-center justify-content-center text-center'
             style={{ paddingBottom: "30px" }}
           >
-            {data.map((item) => (
+            {filterData.map((item) => (
               <ProductCard
                 key={item}
                 title={item.title}

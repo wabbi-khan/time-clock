@@ -16,7 +16,7 @@ import {
 } from "firebase/storage";
 import { saveItems } from "../utils/firebaseFunction";
 import { useStateValue } from "../context/StateProvider";
-import { AllWatchItems } from "../utils/firebaseFunction";
+// import { AllWatchItems } from "../utils/firebaseFunction";
 import { actionType } from "../context/reducer";
 const CreateProduct = () => {
   const [title, setTitle] = useState("");
@@ -118,7 +118,7 @@ const CreateProduct = () => {
         setLoading(false);
       }, 4000);
     }
-    fetchData();
+    // fetchData();
   };
   const clearData = () => {
     setTitle("");
@@ -127,14 +127,14 @@ const CreateProduct = () => {
     setPrice("");
   };
 
-  const fetchData = async () => {
-    await AllWatchItems().then((data) => {
-      dispatch({
-        type: actionType.SET_WATCH_ITEMS,
-        watchItems: data,
-      });
-    });
-  };
+  // const fetchData = async () => {
+  //   await AllWatchItems().then((data) => {
+  //     dispatch({
+  //       type: actionType.SET_WATCH_ITEMS,
+  //       watchItems: data,
+  //     });
+  //   });
+  // };
   return (
     <div className='container mt-4 pt-4'>
       <div className='row'>

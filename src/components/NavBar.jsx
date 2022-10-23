@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Logo from "./../img/logo.png";
 import { motion } from "framer-motion";
@@ -11,6 +11,7 @@ import { app } from "../firebase.config";
 import { useStateValue } from "../context/StateProvider";
 import { actionType } from "../context/reducer";
 import { MdAdd, MdLogout } from "react-icons/md";
+// import {fetchUser}
 const NavBar = () => {
   const firebaseAuth = getAuth(app);
   const provider = new GoogleAuthProvider(app);
@@ -33,6 +34,17 @@ const NavBar = () => {
       setDropDown(!dropDown);
     }
   };
+  useEffect(() => {
+    const userInfo =
+      localStorage.getItem("user") !== "undefined"
+        ? JSON.parse(localStorage.getItem("user"))
+        : localStorage.clear();
+    dispatch({
+      type: actionType.SET_USER,
+      user: userInfo,
+    });
+    console.log(userInfo);
+  }, []);
   // ========== Log out ================
   const Logout = () => {
     setDropDown(false);
