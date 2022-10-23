@@ -2,42 +2,22 @@ import React, { useState, useEffect } from "react";
 import { WatchData } from "../utils/data";
 import { motion } from "framer-motion";
 import ProductCard from "./ProductCard";
-// import { productsData } from "../utils/products";
-import { useStateValue } from "../context/StateProvider";
-// import axios from "axios";
-import {
-  collection,
-  doc,
-  getDocs,
-  orderBy,
-  query,
-  setDoc,
-} from "firebase/firestore";
+import { collection, getDocs, orderBy, query } from "firebase/firestore";
 import { firestore } from "../firebase.config";
-import { AllWatchItems } from "../utils/firebaseFunction";
 const Watches = () => {
-  // const { items } = AllWatchItems();
-  const [{ watchItems }] = useStateValue();
-  console.log(watchItems);
-  const [data, setData] = useState([]);
-  // const [filterData, setFilterData] = useState([]);
-  // // const [{ watchItems }] = useStateValue();
-  // useEffect(() => {
-  //   const AllWatchItems = async () => {
-  //     const items = await getDocs(
-  //       query(collection(firestore, "watchItems"), orderBy("id", "desc"))
-  //     );
-  //     const Data = items.docs.map((doc) => doc.data());
-  //     setData(Data);
-  //   };
-  //   AllWatchItems();
-  // }, []);
-  const filterItems = (name) => {
-    const filter = watchItems?.filter((n) => n.title === name);
-    setData(filter);
-  };
+  const [data, setData] = useState('Rolex');
+  useEffect(() => {
+    const AllWatchItems = async (name) => {
+      const items = await getDocs(
+        query(collection(firestore, "watchItems"), orderBy("id", "desc"))
+      );
+      const Data = items.docs.map((doc) => doc.data());
+      setData(Data);
+    };
+    AllWatchItems();
+  }, []);
 
-  // console.log(data);
+  console.log(data);
   return (
     <div className='container mt-4 pb-4'>
       <div className='row'>
@@ -55,7 +35,7 @@ const Watches = () => {
                 whileHover={{ scale: 1.2 }}
                 className='watchBtnBg'
                 key={item.id}
-                onClick={() => filterItems(item.name)}
+                onClick={() => data.filter((e) => e.title === item.name)}
               >
                 <div className='watchIcnon'>{item.icon}</div>
                 <div className='watchName mt-2'> {item.name} </div>

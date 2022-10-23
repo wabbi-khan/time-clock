@@ -16,7 +16,7 @@ export const saveItems = async(data) => {
     });
 };
 
-//get all Watch items
+//get all food items
 export const AllWatchItems = async() => {
     const items = await getDocs(
         query(collection(firestore, "watchItems"), orderBy("id", "desc"))
