@@ -6,12 +6,12 @@ import { AnimatePresence } from "framer-motion";
 import CreateProduct from "./components/CreateProduct";
 import MainPage from "./routes/MainPage";
 import { CartProvider } from "react-use-cart";
+import MobileHeader from "./components/MobileHeader";
 // import { useStateValue } from "./context/StateProvider";
 // import { AllWatchItems } from "./utils/firebaseFunction";
 // import { actionType } from "./context/reducer";
 // import Footer from "./components/Footer";
 // import Home from "./pages/Home";
-// import MobileHeader from "./components/MobileHeader";
 // import SpringWinter from "./components/SpringWinter";
 const App = () => {
   // const [{ watchItems }, dispatch] = useStateValue();
@@ -41,15 +41,14 @@ const App = () => {
               path='/createProducts'
               element={
                 <>
-                  {" "}
-                  <NavBar /> <CreateProduct />{" "}
+                  <NavBar /> <CreateProduct />
                 </>
               }
             />
           </Routes>
           {/* <SpringWinter />
-          <Footer />
-          <MobileHeader /> */}
+          <Footer /> */}
+          <MobileHeader />
         </Router>
       </AnimatePresence>
     </CartProvider>

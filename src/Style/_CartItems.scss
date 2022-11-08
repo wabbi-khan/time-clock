@@ -3,8 +3,13 @@
     overflow-y: scroll;
     height: 400px;
     padding-bottom: 10px;
+    overflow-x: hidden;
     &::-webkit-scrollbar {
-        display: none;
+        width: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: $circleColor;
+        border-radius: 20px;
     }
 }
 

@@ -20,5 +20,7 @@
 @media screen and (max-width: 600px) {
     .mobHeader {
         display: block;
+        z-index: 9999;
+        position: fixed;
     }
 }
