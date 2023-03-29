@@ -1,40 +1,41 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import {
   MdWatch,
   MdCloudUpload,
   MdDelete,
   MdAttachMoney,
-} from "react-icons/md";
-import { watchCategory } from "../utils/data";
-import Loader from "./Loader";
-import { storage } from "../firebase.config";
+} from 'react-icons/md';
+import { BiCategory } from 'react-icons/bi';
+import { watchCategory } from '../utils/data';
+import Loader from './Loader';
+import { storage } from '../firebase.config';
 import {
   deleteObject,
   getDownloadURL,
   ref,
   uploadBytesResumable,
-} from "firebase/storage";
-import { saveItems } from "../utils/firebaseFunction";
-import { useStateValue } from "../context/StateProvider";
+} from 'firebase/storage';
+import { saveItems } from '../utils/firebaseFunction';
+// import { useStateValue } from '../context/StateProvider';
 // import { AllWatchItems } from "../utils/firebaseFunction";
-import { actionType } from "../context/reducer";
+// import { actionType } from '../context/reducer';
 const CreateProduct = () => {
-  const [title, setTitle] = useState("");
-  const [price, setPrice] = useState("");
+  const [title, setTitle] = useState('');
+  const [price, setPrice] = useState('');
   const [category, setCategory] = useState(null);
   const [imageAsset, setImageAsset] = useState(null);
   const [fields, setFields] = useState(false);
-  const [alertStatus, setAlertStatus] = useState("danger");
+  const [alertStatus, setAlertStatus] = useState('danger');
   const [msg, setMsg] = useState(null);
   const [Loading, setLoading] = useState(false);
-  const [{ watchItems }, dispatch] = useStateValue();
+  // const [{ watchItems }, dispatch] = useStateValue();
   const uploadImage = (e) => {
     setLoading(true);
     const imageFile = e.target.files[0];
     const storageRef = ref(storage, `Images/${Date.now()}-${imageFile.name}`);
     const uploadTask = uploadBytesResumable(storageRef, imageFile);
     uploadTask.on(
-      "state_changed",
+      'state_changed',
       (snapshot) => {
         const uploadProgress =
           (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
@@ -43,8 +44,8 @@ const CreateProduct = () => {
       (error) => {
         console.log(error);
         setFields(true);
-        setMsg("Error while uploading : Try again ☹");
-        setAlertStatus("danger");
+        setMsg('Error while uploading : Try again ☹');
+        setAlertStatus('danger');
         setTimeout(() => {
           setFields(false);
           setLoading(false);
@@ -55,8 +56,8 @@ const CreateProduct = () => {
           setImageAsset(downloadUrl);
           setLoading(false);
           setFields(true);
-          setMsg("Image uploaded successfully 🎉");
-          setAlertStatus("success");
+          setMsg('Image uploaded successfully 🎉');
+          setAlertStatus('success');
           setTimeout(() => {
             setFields(false);
           }, 4000);
@@ -71,8 +72,8 @@ const CreateProduct = () => {
       setImageAsset(null);
       setLoading(false);
       setFields(true);
-      setMsg("image deleted successfully 😍");
-      setAlertStatus("success");
+      setMsg('image deleted successfully 😍');
+      setAlertStatus('success');
       setTimeout(() => {
         setFields(false);
       }, 4000);
@@ -84,7 +85,7 @@ const CreateProduct = () => {
       if (!title || !imageAsset || !price || !category) {
         setFields(true);
         setMsg("Requied fields can't be empty");
-        setAlertStatus("danger");
+        setAlertStatus('danger');
         setTimeout(() => {
           setFields(false);
           setLoading(false);
@@ -101,8 +102,8 @@ const CreateProduct = () => {
         saveItems(data);
         setLoading(false);
         setFields(true);
-        setMsg("Data uploaded successfully 😍");
-        setAlertStatus("success");
+        setMsg('Data uploaded successfully 😍');
+        setAlertStatus('success');
         clearData();
         setTimeout(() => {
           setFields(false);
@@ -111,8 +112,8 @@ const CreateProduct = () => {
     } catch (error) {
       console.log(error);
       setFields(true);
-      setMsg("Error while uploading : Try again ☹");
-      setAlertStatus("danger");
+      setMsg('Error while uploading : Try again ☹');
+      setAlertStatus('danger');
       setTimeout(() => {
         setFields(false);
         setLoading(false);
@@ -121,10 +122,10 @@ const CreateProduct = () => {
     // fetchData();
   };
   const clearData = () => {
-    setTitle("");
-    setCategory("Select Category");
+    setTitle('');
+    setCategory('Select Category');
     setImageAsset(null);
-    setPrice("");
+    setPrice('');
   };
 
   // const fetchData = async () => {
@@ -136,35 +137,38 @@ const CreateProduct = () => {
   //   });
   // };
   return (
-    <div className='container mt-4 pt-4'>
-      <div className='row'>
-        <div className='col-md-12'>
+    <div className="container mt-4 pt-4">
+      <div className="row customClassForm">
+        <div className="col-md-12">
           {fields && (
             <p
               className={`py-4  text-center rounded ${
-                alertStatus === "danger" ? "bg-danger text-light" : "bg-light"
+                alertStatus === 'danger' ? 'bg-danger text-light' : 'bg-light'
               }`}
             >
               {msg}
             </p>
           )}
         </div>
-        <div className='col-md-12'>
-          <div className='d-flex '>
+        <div className="col-md-12">
+          <div className="d-flex watchName">
             <MdWatch />
             <input
-              type='text'
+              type="text"
               required
               value={title}
-              placeholder='Watch Name'
+              placeholder="Watch Name"
               onChange={(e) => setTitle(e.target.value)}
             />
           </div>
         </div>
-        <div className='col-md-12'>
-          <div className='d-flex'>
+        <div className="col-md-12">
+          <div className="d-flex category">
+            <div>
+              <BiCategory />
+            </div>
             <select onChange={(e) => setCategory(e.target.value)}>
-              <option value='other'>Select Category</option>
+              <option value="other">Select Category</option>
               {watchCategory &&
                 watchCategory.map((item) => (
                   <option key={item.id} value={item.name}>
@@ -174,60 +178,81 @@ const CreateProduct = () => {
             </select>
           </div>
         </div>
-        <div className='col-md-12'>
-          <div>
+        <div className="col-md-12">
+          <div className="uploadImage">
             {Loading ? (
               <Loader />
             ) : (
               <>
-                {" "}
+                {' '}
                 {!imageAsset ? (
                   <>
-                    <label>
+                    {/* <label> */}
+                    <div className="clickHere">
                       <div>
                         <MdCloudUpload />
-                        <p>Click here to upload </p>
                       </div>
+                      <div>Click here to upload </div>
+                    </div>
+                    <div>
                       <input
-                        type='file'
-                        name='uploadImage'
-                        accept='image/*'
+                        className="uploadHere"
+                        type="file"
+                        name="uploadImage"
+                        accept="image/*"
                         onChange={uploadImage}
                       />
-                    </label>
+                    </div>
+                    {/* </label> */}
                   </>
                 ) : (
                   <>
                     <div>
-                      <img src={imageAsset} alt='uploadedimage' width={100} />
-                      <button onClick={deleteImage}>
-                        <MdDelete />{" "}
+                      <img src={imageAsset} alt="uploadedimage" width={100} />
+                      <button onClick={deleteImage} className="deleteBtn">
+                        <MdDelete />{' '}
                       </button>
-                    </div>{" "}
+                    </div>{' '}
                   </>
-                )}{" "}
+                )}{' '}
               </>
             )}
           </div>
         </div>
-        <div className='col-md-12'>
-          <div className='d-flex'>
+        <div className="col-md-12">
+          <div className="d-flex watchName">
             <MdAttachMoney />
             <input
-              type='text'
+              type="text"
               required
               value={price}
-              placeholder='Enter Price'
+              placeholder="Enter Price"
               onChange={(e) => setPrice(e.target.value)}
             />
           </div>
         </div>
-        <div className='col-md-12'>
-          <div>
-            {" "}
-            <button type='button' onClick={saveDetails}>
-              Save
-            </button>{" "}
+        <div className="col-md-12">
+          <div className="uploadBtn">
+            <button type="button" onClick={saveDetails}>
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                >
+                  <path fill="none" d="M0 0h24v24H0z"></path>
+                  <path
+                    fill="currentColor"
+                    d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"
+                  ></path>
+                </svg>{' '}
+                Create Product
+              </span>
+            </button>
+            {/* <button type="button" onClick={saveDetails}>
+              Create Product
+            </button> */}
           </div>
         </div>
       </div>

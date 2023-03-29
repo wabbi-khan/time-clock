@@ -628,4 +628,80 @@ nav .searchIcon {
   .watchBtnContent .watchBtnBg:focus {
     margin: 20px 10px 20px 20px;
   }
+}
+.customClassForm .watchName {
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+.customClassForm .watchName svg {
+  font-size: 1.5rem;
+}
+.customClassForm .watchName input {
+  width: 30%;
+  border-radius: 5px;
+  padding: 10px 15px;
+}
+.customClassForm .category {
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+.customClassForm .category svg {
+  font-size: 1.5rem;
+}
+.customClassForm .category select {
+  width: 30%;
+  padding: 10px 15px;
+}
+.customClassForm .uploadImage {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+.customClassForm .uploadImage .clickHere {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+.customClassForm .uploadImage .clickHere svg {
+  font-size: 1.5rem;
+}
+.customClassForm .uploadImage .uploadHere {
+  border: 1px solid black;
+}
+.customClassForm .uploadImage .deleteBtn {
+  margin-left: 1rem;
+  border-radius: 50px;
+  background-color: orange;
+  color: white;
+}
+.customClassForm .uploadBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.customClassForm .uploadBtn button {
+  border: 2px solid #fba824;
+  background-color: #f99508;
+  border-radius: 0.9em;
+  padding: 15px 20px;
+  transition: all ease-in-out 0.2s;
+  font-size: 16px;
+}
+.customClassForm .uploadBtn button span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: 600;
+}
+.customClassForm .uploadBtn button:hover {
+  background-color: #ffa652;
 }/*# sourceMappingURL=style.css.map */
